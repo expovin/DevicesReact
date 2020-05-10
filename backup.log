@@ -1,0 +1,7 @@
+#1589028135 Disk /dev/sdb - 1000 GB / 931 GiB - CHS 121601 255 63
+ 1 : start=     2048, size=  2095104, Id=00, P
+ 2 : start=  2097152, size=   737280, Id=00, P
+ 3 : start=  2834432, size=   262144, Id=00, P
+ 4 : start=  3096576, size=1898312725, Id=00, P
+ 5 : start=1901410304, size=  1755136, Id=00, P
+ 6 : start=1903165440, size= 50358272, Id=00, P

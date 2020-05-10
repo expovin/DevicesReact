@@ -17,6 +17,7 @@ class Devices extends Component {
                             Modello={device.Modello} 
                             urlFoto={device.urlFoto} 
                             DHCP={device.DHCP} 
+                            setMessages={this.props.setMessages}
                             clicked={() => this.props.deviceSelectedHandler(device.Device_Id,true)}/>
         })
 

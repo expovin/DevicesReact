@@ -1,0 +1,3259 @@
+
+
+Sat May  9 14:40:22 2020
+Command line: TestDisk
+
+TestDisk 7.0, Data Recovery Utility, April 2015
+Christophe GRENIER <grenier@cgsecurity.org>
+http://www.cgsecurity.org
+OS: Linux, kernel 4.15.0-48-generic (#51-Ubuntu SMP Wed Apr 3 08:28:49 UTC 2019) x86_64
+Compiler: GCC 7.2
+ext2fs lib: 1.44.1, ntfs lib: libntfs-3g, reiserfs lib: none, ewf lib: none, curses lib: ncurses 6.0
+/dev/sda: LBA, HPA, LBA48, DCO support
+/dev/sda: size       1000215216 sectors
+/dev/sda: user_max   1000215216 sectors
+/dev/sda: native_max 1000215216 sectors
+/dev/sda: dco        1000215216 sectors
+Warning: can't get size for Disk /dev/mapper/control - 0 B - 0 sectors, sector size=512
+Hard disk list
+Disk /dev/sda - 512 GB / 476 GiB - CHS 62260 255 63, sector size=512 - KINGSTON SKC400S37512G, S/N:50026B767A0326C5, FW:SAFM001B
+Disk /dev/sdb - 1000 GB / 931 GiB - CHS 121601 255 63, sector size=512 - JMicron Tech, FW:3202
+
+Partition table type (auto): EFI GPT
+Disk /dev/sdb - 1000 GB / 931 GiB - JMicron Tech
+Partition table type: EFI GPT
+
+Analyse Disk /dev/sdb - 1000 GB / 931 GiB - CHS 121601 255 63
+hdr_size=92
+hdr_lba_self=1
+hdr_lba_alt=1953525167 (expected 1953525167)
+hdr_lba_start=34
+hdr_lba_end=1953525134
+hdr_lba_table=2
+hdr_entries=128
+hdr_entsz=128
+check_part_gpt failed for partition
+ 3 P MS Reserved              2834432    3096575     262144 [Microsoft reserved partition]
+Current partition structure:
+ 1 P Unknown                     2048    2097151    2095104 [Basic data partition]
+ 2 P EFI System               2097152    2834431     737280 [EFI system partition]
+No FAT, NTFS, ext2, JFS, Reiser, cramfs or XFS marker
+ 3 P MS Reserved              2834432    3096575     262144 [Microsoft reserved partition]
+ 3 P MS Reserved              2834432    3096575     262144 [Microsoft reserved partition]
+ 4 P MS Data                  3096576 1901409300 1898312725 [Basic data partition]
+ 5 P Unknown               1901410304 1903165439    1755136
+ 6 P MS Data               1903165440 1953523711   50358272 [Basic data partition]
+Backup partition structure
+partition_save
+
+search_part()
+Disk /dev/sdb - 1000 GB / 931 GiB - CHS 121601 255 63
+NTFS at 0/32/33
+filesystem size           2095104
+sectors_per_cluster       8
+mft_lcn                   87296
+mftmirr_lcn               2
+clusters_per_mft_record   -10
+clusters_per_index_record 1
+NTFS part_offset=1048576, part_size=1072693248, sector_size=512
+NTFS partition cannot be added (part_offset<part_size).
+NTFS at 0/32/33
+filesystem size           2095104
+sectors_per_cluster       8
+mft_lcn                   87296
+mftmirr_lcn               2
+clusters_per_mft_record   -10
+clusters_per_index_record 1
+     MS Data                     2048    2097151    2095104
+     NTFS, blocksize=4096, 1072 MB / 1023 MiB
+FAT32 at 130/138/9
+FAT1 : 6766-7478
+FAT2 : 7479-8191
+start_rootdir : 8192 root cluster : 2
+Data : 8192-737279
+sectors : 737280
+cluster_size : 8
+no_of_cluster : 91136 (2 - 91137)
+fat_length 713 calculated 713
+
+FAT32 at 130/138/9
+     MS Data                  2097152    2834431     737280 [SYSTEM]
+     FAT32, blocksize=4096, 377 MB / 360 MiB
+NTFS at 192/192/1
+filesystem size           1898312725
+sectors_per_cluster       8
+mft_lcn                   786432
+mftmirr_lcn               2
+clusters_per_mft_record   -10
+clusters_per_index_record 1
+NTFS part_offset=1585446912, part_size=971936115200, sector_size=512
+NTFS partition cannot be added (part_offset<part_size).
+NTFS at 192/192/1
+filesystem size           1898312725
+sectors_per_cluster       8
+mft_lcn                   786432
+mftmirr_lcn               2
+clusters_per_mft_record   -10
+clusters_per_index_record 1
+     MS Data                  3096576 1901409300 1898312725
+     NTFS, blocksize=4096, 971 GB / 905 GiB
+NTFS at 118357/80/60
+filesystem size           1755136
+sectors_per_cluster       8
+mft_lcn                   73130
+mftmirr_lcn               2
+clusters_per_mft_record   -10
+clusters_per_index_record 1
+     MS Data               1899655169 1901410304    1755136
+     NTFS found using backup sector, blocksize=4096, 898 MB / 857 MiB
+NTFS at 118357/80/60
+filesystem size           1755136
+sectors_per_cluster       8
+mft_lcn                   73130
+mftmirr_lcn               2
+clusters_per_mft_record   -10
+clusters_per_index_record 1
+     MS Data               1901410304 1903165439    1755136
+     NTFS, blocksize=4096, 898 MB / 857 MiB
+NTFS at 118466/145/16
+filesystem size           50358272
+sectors_per_cluster       8
+mft_lcn                   786432
+mftmirr_lcn               2
+clusters_per_mft_record   -10
+clusters_per_index_record 1
+     MS Data               1852807169 1903165440   50358272
+     NTFS found using backup sector, blocksize=4096, 25 GB / 24 GiB
+NTFS at 118466/145/16
+filesystem size           50358272
+sectors_per_cluster       8
+mft_lcn                   786432
+mftmirr_lcn               2
+clusters_per_mft_record   -10
+clusters_per_index_record 1
+     MS Data               1903165440 1953523711   50358272
+     NTFS, blocksize=4096, 25 GB / 24 GiB
+
+Results
+   P MS Data                     2048    2097151    2095104
+     NTFS, blocksize=4096, 1072 MB / 1023 MiB
+   P MS Data                  2097152    2834431     737280 [SYSTEM]
+     FAT32, blocksize=4096, 377 MB / 360 MiB
+     MS Data                  3096576 1901409300 1898312725
+     NTFS, blocksize=4096, 971 GB / 905 GiB
+     MS Data               1852807169 1903165440   50358272
+     NTFS found using backup sector, blocksize=4096, 25 GB / 24 GiB
+     MS Data               1899655169 1901410304    1755136
+     NTFS found using backup sector, blocksize=4096, 898 MB / 857 MiB
+     MS Data               1901410304 1903165439    1755136
+     NTFS, blocksize=4096, 898 MB / 857 MiB
+     MS Data               1903165440 1953523711   50358272
+     NTFS, blocksize=4096, 25 GB / 24 GiB
+
+Hint for advanced users. dmsetup may be used if you prefer to avoid to rewrite the partition table for the moment:
+echo "0 2095104 linear /dev/sdb 2048" | dmsetup create test0
+echo "0 737280 linear /dev/sdb 2097152" | dmsetup create test1
+echo "0 1898312725 linear /dev/sdb 3096576" | dmsetup create test2
+echo "0 503582ntfs_mst_post_read_fixup_warn: magic: 0x00000000  size: 1024   usa_ofs: 0  usa_count: 0: Argomento non valido
+Record 10 has no FILE magic (0x0)
+Failed to open inode FILE_UpCase: Errore di input/output
+ntfs_mst_post_read_fixup_warn: magic: 0x00000000  size: 1024   usa_ofs: 0  usa_count: 0: Argomento non valido
+Record 0 has no FILE magic (0x0)
+Failed to load $MFT: Errore di input/output
+ntfs_mst_post_read_fixup_warn: magic: 0x00000000  size: 1024   usa_ofs: 0  usa_count: 0: Argomento non valido
+Record 0 has no FILE magic (0x0)
+Failed to load $MFT: Errore di input/output
+ntfs_mst_post_read_fixup_warn: magic: 0x00000000  size: 1024   usa_ofs: 0  usa_count: 0: Argomento non valido
+Record 0 has no FILE magic (0x0)
+Failed to load $MFT: Errore di input/output
+ntfs_mst_post_read_fixup_warn: magic: 0x00000000  size: 1024   usa_ofs: 0  usa_count: 0: Argomento non valido
+Record 0 has no FILE magic (0x0)
+Failed to load $MFT: Errore di input/output
+72 linear /dev/sdb 1852807169" | dmsetup create test3
+echo "0 1755136 linear /dev/sdb 1899655169" | dmsetup create test4
+echo "0 1755136 linear /dev/sdb 1901410304" | dmsetup create test5
+echo "0 50358272 linear /dev/sdb 1903165440" | dmsetup create test6
+ntfs_device_testdisk_io_ioctl() unimplemented
+ntfs_device_testdisk_io_ioctl() unimplemented
+NTFS filesystem need to be repaired.
+
+
+dir_partition inode=5
+   P MS Data                  3096576 1901409300 1898312725
+     NTFS, blocksize=4096, 971 GB / 905 GiB
+Directory /
+       5 dr-xr-xr-x     0      0         0 16-Apr-2020 17:48 .
+       5 dr-xr-xr-x     0      0         0 16-Apr-2020 17:48 ..
+    8542 dr-xr-xr-x     0      0         0 27-Mar-2020 16:02 $RECYCLE.BIN
+   11599 dr-xr-xr-x     0      0         0 16-Apr-2020 18:18 PC FISSO PAPA'
+      36 dr-xr-xr-x     0      0         0 27-Mar-2020 15:20 System Volume Information
+      39 dr-xr-xr-x     0      0         0 27-Mar-2020 16:22 thyssenkrupp2020
+ntfs_device_testdisk_io_ioctl() unimplemented
+ntfs_device_testdisk_io_ioctl() unimplemented
+
+     MS Data               1852807169 1903165440   50358272
+     NTFS found using backup sector, blocksize=4096, 25 GB / 24 GiB
+Can't open filesystem. Filesystem seems damaged.
+ntfs_device_testdisk_io_ioctl() unimplemented
+ntfs_device_testdisk_io_ioctl() unimplemented
+
+     MS Data               1899655169 1901410304    1755136
+     NTFS found using backup sector, blocksize=4096, 898 MB / 857 MiB
+Can't open filesystem. Filesystem seems damaged.
+ntfs_device_testdisk_io_ioctl() unimplemented
+
+
+dir_partition inode=5
+     MS Data               1901410304 1903165439    1755136
+     NTFS, blocksize=4096, 898 MB / 857 MiB
+Directory /
+       5 dr-xr-xr-x     0      0         0 16-Sep-2018 03:40 .
+       5 dr-xr-xr-x     0      0         0 16-Sep-2018 03:40 ..
+      36 dr-xr-xr-x     0      0         0 16-Sep-2018 03:41 Recovery
+      41 dr-xr-xr-x     0      0         0  3-May-2020 14:58 System Volume Information
+ntfs_device_testdisk_io_ioctl() unimplemented
+
+
+dir_partition inode=5
+     MS Data               1903165440 1953523711   50358272
+     NTFS, blocksize=4096, 25 GB / 24 GiB
+Directory /
+       5 dr-xr-xr-x     0      0         0 27-Mar-2020 16:18 .
+       5 dr-xr-xr-x     0      0         0 27-Mar-2020 16:18 ..
+      39 dr-xr-xr-x     0      0         0  3-May-2020 14:57 $RECYCLE.BIN
+      36 dr-xr-xr-x     0      0         0  3-May-2020 15:07 System Volume Information
+
+interface_write()
+ 1 P MS Data                     2048    2097151    2095104
+ 2 P MS Data                  2097152    2834431     737280 [SYSTEM]
+ 3 P MS Data                  3096576 1901409300 1898312725
+
+search_part()
+Disk /dev/sdb - 1000 GB / 931 GiB - CHS 121601 255 63
+NTFS at 0/32/33
+filesystem size           2095104
+sectors_per_cluster       8
+mft_lcn                   87296
+mftmirr_lcn               2
+clusters_per_mft_record   -10
+clusters_per_index_record 1
+NTFS part_offset=1048576, part_size=1072693248, sector_size=512
+NTFS partition cannot be added (part_offset<part_size).
+NTFS at 0/32/33
+filesystem size           2095104
+sectors_per_cluster       8
+mft_lcn                   87296
+mftmirr_lcn               2
+clusters_per_mft_record   -10
+clusters_per_index_record 1
+     MS Data                     2048    2097151    2095104
+     NTFS, blocksize=4096, 1072 MB / 1023 MiB
+NTFS at 51/197/43
+heads/cylinder 16 (NTFS) != 255 (HD)
+sect/track 2 (NTFS) != 63 (HD)
+filesystem size           6174
+sectors_per_cluster       1
+mft_lcn                   2058
+mftmirr_lcn               5162
+clusters_per_mft_record   2
+clusters_per_index_record 8
+     MS Data                   825595     831768       6174
+     NTFS found using backup sector, blocksize=512, 3161 KB / 3087 KiB
+NTFS at 51/197/43
+heads/cylinder 16 (NTFS) != 255 (HD)
+sect/track 2 (NTFS) != 63 (HD)
+filesystem size           6174
+sectors_per_cluster       1
+mft_lcn                   2058
+mftmirr_lcn               5162
+clusters_per_mft_record   2
+clusters_per_index_record 8
+     MS Data                   831768     837941       6174 [Boot]
+     NTFS, blocksize=512, 3161 KB / 3087 KiB
+NTFS at 54/129/52
+heads/cylinder 16 (NTFS) != 255 (HD)
+sect/track 2 (NTFS) != 63 (HD)
+filesystem size           6174
+sectors_per_cluster       1
+mft_lcn                   2058
+mftmirr_lcn               5162
+clusters_per_mft_record   2
+clusters_per_index_record 8
+     MS Data                   869515     875688       6174
+     NTFS found using backup sector, blocksize=512, 3161 KB / 3087 KiB
+NTFS at 54/129/52
+heads/cylinder 16 (NTFS) != 255 (HD)
+sect/track 2 (NTFS) != 63 (HD)
+filesystem size           6174
+sectors_per_cluster       1
+mft_lcn                   2058
+mftmirr_lcn               5162
+clusters_per_mft_record   2
+clusters_per_index_record 8
+     MS Data                   875688     881861       6174 [Boot]
+     NTFS, blocksize=512, 3161 KB / 3087 KiB
+NTFS at 130/138/8
+filesystem size           2095104
+sectors_per_cluster       8
+mft_lcn                   87296
+mftmirr_lcn               2
+clusters_per_mft_record   -10
+clusters_per_index_record 1
+     MS Data                     2048    2097151    2095104
+     NTFS found using backup sector, blocksize=4096, 1072 MB / 1023 MiB
+NTFS at 130/138/8
+filesystem size           2095104
+sectors_per_cluster       8
+mft_lcn                   87296
+mftmirr_lcn               2
+clusters_per_mft_record   -10
+clusters_per_index_record 1
+     MS Data                  2097151    4192254    2095104
+     NTFS, blocksize=4096, 1072 MB / 1023 MiB
+FAT32 at 130/138/9
+FAT1 : 6766-7478
+FAT2 : 7479-8191
+start_rootdir : 8192 root cluster : 2
+Data : 8192-737279
+sectors : 737280
+cluster_size : 8
+no_of_cluster : 91136 (2 - 91137)
+fat_length 713 calculated 713
+
+FAT32 at 130/138/9
+     MS Data                  2097152    2834431     737280 [SYSTEM]
+     FAT32, blocksize=4096, 377 MB / 360 MiB
+FAT32 at 130/138/15
+FAT1 : 6766-7478
+FAT2 : 7479-8191
+start_rootdir : 8192 root cluster : 2
+Data : 8192-737279
+sectors : 737280
+cluster_size : 8
+no_of_cluster : 91136 (2 - 91137)
+fat_length 713 calculated 713
+FAT differs, FAT sectors=704-713/713
+set_FAT_info: name from BS used
+
+FAT32 at 130/138/15
+     MS Data                  2097152    2834431     737280 [NO NAME]
+     FAT32, blocksize=4096, 377 MB / 360 MiB
+FAT32 at 130/138/15
+FAT1 : 6766-7478
+FAT2 : 7479-8191
+start_rootdir : 8192 root cluster : 2
+Data : 8192-737279
+sectors : 737280
+cluster_size : 8
+no_of_cluster : 91136 (2 - 91137)
+fat_length 713 calculated 713
+FAT differs, FAT sectors=704-713/713
+set_FAT_info: name from BS used
+
+FAT32 at 130/138/15
+     MS Data                  2097158    2834437     737280 [NO NAME]
+     FAT32, blocksize=4096, 377 MB / 360 MiB
+FAT32 at 131/144/22
+FAT1 : 6766-7478
+FAT2 : 7479-8191
+start_rootdir : 8192 root cluster : 2
+Data : 8192-737279
+sectors : 737280
+cluster_size : 8
+no_of_cluster : 91136 (2 - 91137)
+fat_length 713 calculated 713
+FAT differs, FAT sectors=0-16/713
+set_FAT_info: name from BS used
+
+FAT32 at 131/144/22
+     MS Data                  2113608    2850887     737280 [NO NAME]
+     FAT32, blocksize=4096, 377 MB / 360 MiB
+NTFS at 192/192/1
+filesystem size           1898312725
+sectors_per_cluster       8
+mft_lcn                   786432
+mftmirr_lcn               2
+clusters_per_mft_record   -10
+clusters_per_index_record 1
+NTFS part_offset=1585446912, part_size=971936115200, sector_size=512
+NTFS partition cannot be added (part_offset<part_size).
+NTFS at 192/192/1
+filesystem size           1898312725
+sectors_per_cluster       8
+mft_lcn                   786432
+mftmirr_lcn               2
+clusters_per_mft_record   -10
+clusters_per_index_record 1
+     MS Data                  3096576 1901409300 1898312725
+     NTFS, blocksize=4096, 971 GB / 905 GiB
+NTFS at 7492/103/60
+heads/cylinder 16 (NTFS) != 255 (HD)
+sect/track 2 (NTFS) != 63 (HD)
+filesystem size           6174
+sectors_per_cluster       1
+mft_lcn                   2058
+mftmirr_lcn               5162
+clusters_per_mft_record   2
+clusters_per_index_record 8
+     MS Data                120359355  120365528       6174
+     NTFS found using backup sector, blocksize=512, 3161 KB / 3087 KiB
+NTFS at 7492/103/60
+heads/cylinder 16 (NTFS) != 255 (HD)
+sect/track 2 (NTFS) != 63 (HD)
+filesystem size           6174
+sectors_per_cluster       1
+mft_lcn                   2058
+mftmirr_lcn               5162
+clusters_per_mft_record   2
+clusters_per_index_record 8
+     MS Data                120365528  120371701       6174 [Boot]
+     NTFS, blocksize=512, 3161 KB / 3087 KiB
+
+     Unknown                127442024  134245479    6803456
+     WBFS, 3483 MB / 3322 MiB
+Partition not added.
+
+     Unknown                127445592  136014423    8568832
+     WBFS, 4387 MB / 4184 MiB
+Partition not added.
+
+     Unknown                127445656  132987543    5541888
+     WBFS, 2837 MB / 2706 MiB
+Partition not added.
+
+     Unknown                127535608  132807159    5271552
+     WBFS, 2699 MB / 2574 MiB
+Partition not added.
+
+     Unknown                127816808  130077799    2260992
+     WBFS, 1157 MB / 1104 MiB
+Partition not added.
+
+     Unknown                127819288  133348887    5529600
+     WBFS, 2831 MB / 2700 MiB
+Partition not added.
+
+     Unknown                127857272  136012407    8155136
+     WBFS, 4175 MB / 3982 MiB
+Partition not added.
+
+     Unknown                127941080  132549079    4608000
+     WBFS, 2359 MB / 2250 MiB
+Partition not added.
+
+     Unknown                127970576  131116303    3145728
+     WBFS, 1610 MB / 1536 MiB
+Partition not added.
+
+     Unknown                127970640  135077199    7106560
+     WBFS, 3638 MB / 3470 MiB
+Partition not added.
+
+     Unknown                127972912  135607855    7634944
+     WBFS, 3909 MB / 3728 MiB
+Partition not added.
+
+     Unknown                128030536  131811143    3780608
+     WBFS, 1935 MB / 1846 MiB
+Partition not added.
+
+     Unknown                128059960  131594807    3534848
+     WBFS, 1809 MB / 1726 MiB
+Partition not added.
+
+     Unknown                128068200  134543975    6475776
+     WBFS, 3315 MB / 3162 MiB
+Partition not added.
+
+     Unknown                128084504  130837015    2752512
+     WBFS, 1409 MB / 1344 MiB
+Partition not added.
+
+     Unknown                128090736  135049839    6959104
+     WBFS, 3563 MB / 3398 MiB
+Partition not added.
+
+     Unknown                128092872  130730695    2637824
+     WBFS, 1350 MB / 1288 MiB
+Partition not added.
+
+     Unknown                128104272  129165135    1060864
+     WBFS, 543 MB / 518 MiB
+Partition not added.
+
+     Unknown                128104312  131135351    3031040
+     WBFS, 1551 MB / 1480 MiB
+Partition not added.
+
+     Unknown                128120760  135223223    7102464
+     WBFS, 3636 MB / 3468 MiB
+Partition not added.
+
+     Unknown                180698136  182795287    2097152
+     WBFS, 1073 MB / 1024 MiB
+Partition not added.
+
+     Unknown                183872656  183991439     118784
+     WBFS, 60 MB / 58 MiB
+Partition not added.
+FAT12 at 11494/177/12
+FAT1 : 1-9
+FAT2 : 10-18
+start_rootdir : 19
+Data : 33-2879
+sectors : 2880
+cluster_size : 1
+no_of_cluster : 2847 (2 - 2848)
+fat_length 9 calculated 9
+heads/cylinder 2 (FAT) != 255 (HD)
+sect/track 18 (FAT) != 63 (HD)
+
+FAT12 at 11494/177/12
+     MS Data                184662272  184665151       2880 [EFISECTOR]
+     FAT12, blocksize=512, 1474 KB / 1440 KiB
+
+     Unknown                185516024  187256823    1740800
+     WBFS, 891 MB / 850 MiB
+Partition not added.
+FAT12 at 11721/14/6
+FAT1 : 1-9
+FAT2 : 10-18
+start_rootdir : 19
+Data : 33-2879
+sectors : 2880
+cluster_size : 1
+no_of_cluster : 2847 (2 - 2848)
+fat_length 9 calculated 9
+heads/cylinder 2 (FAT) != 255 (HD)
+sect/track 18 (FAT) != 63 (HD)
+
+FAT12 at 11721/14/6
+     MS Data                188298752  188301631       2880 [EFISECTOR]
+     FAT12, blocksize=512, 1474 KB / 1440 KiB
+
+     Unknown                188688752  193497455    4808704
+     WBFS, 2462 MB / 2348 MiB
+Partition not added.
+
+     Unknown                193497464  195217783    1720320
+     WBFS, 880 MB / 840 MiB
+Partition not added.
+
+     Unknown                215460096  222279935    6819840
+     WBFS, 3491 MB / 3330 MiB
+Partition not added.
+
+     Unknown                233314344  237905959    4591616
+     WBFS, 2350 MB / 2242 MiB
+Partition not added.
+
+     Unknown                237905984  239671359    1765376
+     WBFS, 903 MB / 862 MiB
+Partition not added.
+
+     Unknown                242417472  243990335    1572864
+     WBFS, 805 MB / 768 MiB
+Partition not added.
+
+     Unknown                251997816  257523319    5525504
+     WBFS, 2829 MB / 2698 MiB
+Partition not added.
+
+     Unknown                259325016  261905495    2580480
+     WBFS, 1321 MB / 1260 MiB
+Partition not added.
+
+     Unknown                261905520  265411695    3506176
+     WBFS, 1795 MB / 1712 MiB
+Partition not added.
+
+     Unknown                272196552  274920391    2723840
+     WBFS, 1394 MB / 1330 MiB
+Partition not added.
+
+     Unknown                274920416  279061471    4141056
+     WBFS, 2120 MB / 2022 MiB
+Partition not added.
+
+     Unknown                307444048  323283279   15839232
+     WBFS, 8109 MB / 7734 MiB
+Partition not added.
+
+     Unknown                348189136  355885519    7696384
+     WBFS, 3940 MB / 3758 MiB
+Partition not added.
+FAT12 at 25639/226/12
+FAT1 : 1-9
+FAT2 : 10-18
+start_rootdir : 19
+Data : 33-2879
+sectors : 2880
+cluster_size : 1
+no_of_cluster : 2847 (2 - 2848)
+fat_length 9 calculated 9
+heads/cylinder 2 (FAT) != 255 (HD)
+sect/track 18 (FAT) != 63 (HD)
+
+FAT12 at 25639/226/12
+     MS Data                411904784  411907663       2880 [EFISECTOR]
+     FAT12, blocksize=512, 1474 KB / 1440 KiB
+
+     Unknown                445910640  451755631    5844992
+     WBFS, 2992 MB / 2854 MiB
+Partition not added.
+
+     Unknown                462234960  470095183    7860224
+     WBFS, 4024 MB / 3838 MiB
+Partition not added.
+
+     Unknown                467004176  474700559    7696384
+     WBFS, 3940 MB / 3758 MiB
+Partition not added.
+
+     Unknown                467085752  467536311     450560
+     WBFS, 230 MB / 220 MiB
+Partition not added.
+
+     Unknown                467326840  473560951    6234112
+     WBFS, 3191 MB / 3044 MiB
+Partition not added.
+
+     Unknown                469446136  475553271    6107136
+     WBFS, 3126 MB / 2982 MiB
+Partition not added.
+
+     Unknown                476625544  484432519    7806976
+     WBFS, 3997 MB / 3812 MiB
+Partition not added.
+
+     Unknown                484884520  485003303     118784
+     WBFS, 60 MB / 58 MiB
+Partition not added.
+
+     Unknown                484904840  489992071    5087232
+     WBFS, 2604 MB / 2484 MiB
+Partition not added.
+
+     Unknown                566675680  574986463    8310784
+     WBFS, 4255 MB / 4058 MiB
+Partition not added.
+FAT12 at 35925/82/14
+FAT1 : 1-9
+FAT2 : 10-18
+start_rootdir : 19
+Data : 33-2879
+sectors : 2880
+cluster_size : 1
+no_of_cluster : 2847 (2 - 2848)
+fat_length 9 calculated 9
+FAT differs, FAT sectors=0-9/9
+heads/cylinder 2 (FAT) != 255 (HD)
+sect/track 18 (FAT) != 63 (HD)
+
+FAT12 at 35925/82/14
+     MS Data                577140304  577143183       2880 [EFISECTOR]
+     FAT12, blocksize=512, 1474 KB / 1440 KiB
+FAT12 at 35929/45/5
+FAT1 : 1-9
+FAT2 : 10-18
+start_rootdir : 19
+Data : 33-2879
+sectors : 2880
+cluster_size : 1
+no_of_cluster : 2847 (2 - 2848)
+fat_length 9 calculated 9
+FAT differs, FAT sectors=0-9/9
+heads/cylinder 2 (FAT) != 255 (HD)
+sect/track 18 (FAT) != 63 (HD)
+
+FAT12 at 35929/45/5
+     MS Data                577202224  577205103       2880 [EFISECTOR]
+     FAT12, blocksize=512, 1474 KB / 1440 KiB
+
+     Unknown                577391440  593230671   15839232
+     WBFS, 8109 MB / 7734 MiB
+Partition not added.
+
+     Unknown                577489144  578849015    1359872
+     WBFS, 696 MB / 664 MiB
+Partition not added.
+
+     Unknown                577526232  585832919    8306688
+     WBFS, 4253 MB / 4056 MiB
+Partition not added.
+
+LVM magic value at 35950/120/27
+
+     Unknown                751688440  760040183    8351744
+     WBFS, 4276 MB / 4078 MiB
+Partition not added.
+
+     Unknown                751906784  759304159    7397376
+     WBFS, 3787 MB / 3612 MiB
+Partition not added.
+
+     Unknown                759304168  767541223    8237056
+     WBFS, 4217 MB / 4022 MiB
+Partition not added.
+
+     Unknown                767541232  769937391    2396160
+     WBFS, 1226 MB / 1170 MiB
+Partition not added.
+
+     Unknown                769937416  778706951    8769536
+     WBFS, 4490 MB / 4282 MiB
+Partition not added.
+check_FAT: Bad jump in FAT partition
+
+     Unknown                778325976  785649623    7323648
+     WBFS, 3749 MB / 3576 MiB
+Partition not added.
+
+     Unknown                785649648  794501103    8851456
+     WBFS, 4531 MB / 4322 MiB
+Partition not added.
+
+     Unknown                794038208  802643903    8605696
+     WBFS, 4406 MB / 4202 MiB
+Partition not added.
+
+     Unknown                802426776  810401687    7974912
+     WBFS, 4083 MB / 3894 MiB
+Partition not added.
+
+     Unknown                810401704  819261351    8859648
+     WBFS, 4536 MB / 4326 MiB
+Partition not added.
+
+     Unknown                819736536  821096407    1359872
+     WBFS, 696 MB / 664 MiB
+Partition not added.
+
+LVM magic value at 55513/127/15
+
+LVM magic value at 55662/171/37
+NTFS at 55772/216/61
+filesystem size           1898312725
+sectors_per_cluster       8
+mft_lcn                   786432
+mftmirr_lcn               2
+clusters_per_mft_record   -10
+clusters_per_index_record 1
+NTFS part_offset=458747314176, part_size=971936115200, sector_size=512
+NTFS partition cannot be added (part_offset<part_size).
+NTFS at 55772/216/61
+filesystem size           1898312725
+sectors_per_cluster       8
+mft_lcn                   786432
+mftmirr_lcn               2
+clusters_per_mft_record   -10
+clusters_per_index_record 1
+     MS Data                895990848 2794303572 1898312725
+     NTFS, blocksize=4096, 971 GB / 905 GiB
+This partition ends after the disk limits. (start=895990848, size=1898312725, end=2794303572, disk end=1953525168)
+FAT12 at 55894/64/3
+FAT1 : 1-9
+FAT2 : 10-18
+start_rootdir : 19
+Data : 33-2879
+sectors : 2880
+cluster_size : 1
+no_of_cluster : 2847 (2 - 2848)
+fat_length 9 calculated 9
+FAT differs, FAT sectors=0-9/9
+heads/cylinder 2 (FAT) != 255 (HD)
+sect/track 18 (FAT) != 63 (HD)
+
+FAT12 at 55894/64/3
+     MS Data                897941144  897944023       2880 [EFISECTOR]
+     FAT12, blocksize=512, 1474 KB / 1440 KiB
+FAT12 at 55896/190/7
+FAT1 : 1-9
+FAT2 : 10-18
+start_rootdir : 19
+Data : 33-2879
+sectors : 2880
+cluster_size : 1
+no_of_cluster : 2847 (2 - 2848)
+fat_length 9 calculated 9
+heads/cylinder 2 (FAT) != 255 (HD)
+sect/track 18 (FAT) != 63 (HD)
+
+FAT12 at 55896/190/7
+     MS Data                897981216  897984095       2880 [EFISECTOR]
+     FAT12, blocksize=512, 1474 KB / 1440 KiB
+FAT12 at 55898/123/2
+FAT1 : 1-9
+FAT2 : 10-18
+start_rootdir : 19
+Data : 33-2879
+sectors : 2880
+cluster_size : 1
+no_of_cluster : 2847 (2 - 2848)
+fat_length 9 calculated 9
+heads/cylinder 2 (FAT) != 255 (HD)
+sect/track 18 (FAT) != 63 (HD)
+
+FAT12 at 55898/123/2
+     MS Data                898009120  898011999       2880 [EFISECTOR]
+     FAT12, blocksize=512, 1474 KB / 1440 KiB
+
+     Unknown                898452344  907078519    8626176
+     WBFS, 4416 MB / 4212 MiB
+Partition not added.
+
+     Unknown                898454512  900219887    1765376
+     WBFS, 903 MB / 862 MiB
+Partition not added.
+
+     Unknown                898719680  903942079    5222400
+     WBFS, 2673 MB / 2550 MiB
+Partition not added.
+
+     Unknown                898728088  902262935    3534848
+     WBFS, 1809 MB / 1726 MiB
+Partition not added.
+
+     Unknown                898733680  904894063    6160384
+     WBFS, 3154 MB / 3008 MiB
+Partition not added.
+
+     Unknown                898790744  907330903    8540160
+     WBFS, 4372 MB / 4170 MiB
+Partition not added.
+
+     Unknown                898792048  907143791    8351744
+     WBFS, 4276 MB / 4078 MiB
+Partition not added.
+
+LVM magic value at 55949/118/18
+
+     Unknown                898877304  905377655    6500352
+     WBFS, 3328 MB / 3174 MiB
+Partition not added.
+
+     Unknown                898925880  906409271    7483392
+     WBFS, 3831 MB / 3654 MiB
+Partition not added.
+
+     Unknown                898934984  903526599    4591616
+     WBFS, 2350 MB / 2242 MiB
+Partition not added.
+
+     Unknown                898944888  902840183    3895296
+     WBFS, 1994 MB / 1902 MiB
+Partition not added.
+
+     Unknown                898945368  901525847    2580480
+     WBFS, 1321 MB / 1260 MiB
+Partition not added.
+
+     Unknown                898970376  906777351    7806976
+     WBFS, 3997 MB / 3812 MiB
+Partition not added.
+
+     Unknown                898970984  899609959     638976
+     WBFS, 327 MB / 312 MiB
+Partition not added.
+
+     Unknown                899136152  903768727    4632576
+     WBFS, 2371 MB / 2262 MiB
+Partition not added.
+
+     Unknown                899168496  906864879    7696384
+     WBFS, 3940 MB / 3758 MiB
+Partition not added.
+
+     Unknown                899400344  903791255    4390912
+     WBFS, 2248 MB / 2144 MiB
+Partition not added.
+
+     Unknown                899448984  905556119    6107136
+     WBFS, 3126 MB / 2982 MiB
+Partition not added.
+
+     Unknown                899449112  902201623    2752512
+     WBFS, 1409 MB / 1344 MiB
+Partition not added.
+
+     Unknown                899449304  902492631    3043328
+     WBFS, 1558 MB / 1486 MiB
+Partition not added.
+
+     Unknown                899487144  902124967    2637824
+     WBFS, 1350 MB / 1288 MiB
+Partition not added.
+
+     Unknown                899832232  904919463    5087232
+     WBFS, 2604 MB / 2484 MiB
+Partition not added.
+
+     Unknown                899851768  900543991     692224
+     WBFS, 354 MB / 338 MiB
+Partition not added.
+
+     Unknown                900234472  903449831    3215360
+     WBFS, 1646 MB / 1570 MiB
+Partition not added.
+
+     Unknown                900282840  907012567    6729728
+     WBFS, 3445 MB / 3286 MiB
+Partition not added.
+
+LVM magic value at 56205/186/59
+FAT12 at 56249/245/13
+FAT1 : 1-9
+FAT2 : 10-18
+start_rootdir : 19
+Data : 33-2879
+sectors : 2880
+cluster_size : 1
+no_of_cluster : 2847 (2 - 2848)
+fat_length 9 calculated 9
+heads/cylinder 2 (FAT) != 255 (HD)
+sect/track 18 (FAT) != 63 (HD)
+
+FAT12 at 56249/245/13
+     MS Data                903655632  903658511       2880 [EFISECTOR]
+     FAT12, blocksize=512, 1474 KB / 1440 KiB
+
+     Unknown                903986808  917642871   13656064
+     WBFS, 6991 MB / 6668 MiB
+Partition not added.
+
+LVM magic value at 56625/167/54
+
+     Unknown                929318992  930084943     765952
+     WBFS, 392 MB / 374 MiB
+Partition not added.
+
+     Unknown                929462824  937998887    8536064
+     WBFS, 4370 MB / 4168 MiB
+Partition not added.
+
+     Unknown                929661200  930365711     704512
+     WBFS, 360 MB / 344 MiB
+Partition not added.
+
+     Unknown                929671704  934320663    4648960
+     WBFS, 2380 MB / 2270 MiB
+Partition not added.
+
+     Unknown                929771640  933666935    3895296
+     WBFS, 1994 MB / 1902 MiB
+Partition not added.
+
+     Unknown                929904424  930543399     638976
+     WBFS, 327 MB / 312 MiB
+Partition not added.
+NTFS at 58189/46/18
+heads/cylinder 16 (NTFS) != 255 (HD)
+sect/track 2 (NTFS) != 63 (HD)
+filesystem size           6174
+sectors_per_cluster       1
+mft_lcn                   2058
+mftmirr_lcn               5162
+clusters_per_mft_record   2
+clusters_per_index_record 8
+     MS Data                934803027  934809200       6174
+     NTFS found using backup sector, blocksize=512, 3161 KB / 3087 KiB
+NTFS at 58189/46/18
+heads/cylinder 16 (NTFS) != 255 (HD)
+sect/track 2 (NTFS) != 63 (HD)
+filesystem size           6174
+sectors_per_cluster       1
+mft_lcn                   2058
+mftmirr_lcn               5162
+clusters_per_mft_record   2
+clusters_per_index_record 8
+     MS Data                934809200  934815373       6174 [Boot]
+     NTFS, blocksize=512, 3161 KB / 3087 KiB
+
+     Unknown                935264024  939912983    4648960
+     WBFS, 2380 MB / 2270 MiB
+Partition not added.
+
+     Unknown                935265136  940073839    4808704
+     WBFS, 2462 MB / 2348 MiB
+Partition not added.
+
+     Unknown                935327416  938358455    3031040
+     WBFS, 1551 MB / 1480 MiB
+Partition not added.
+NTFS at 59287/210/28
+filesystem size           1898312725
+sectors_per_cluster       8
+mft_lcn                   786432
+mftmirr_lcn               2
+clusters_per_mft_record   -10
+clusters_per_index_record 1
+NTFS part_offset=487658962944, part_size=971936115200, sector_size=512
+NTFS partition cannot be added (part_offset<part_size).
+NTFS at 59287/210/28
+filesystem size           1898312725
+sectors_per_cluster       8
+mft_lcn                   786432
+mftmirr_lcn               2
+clusters_per_mft_record   -10
+clusters_per_index_record 1
+     MS Data                952458912 2850771636 1898312725
+     NTFS, blocksize=4096, 971 GB / 905 GiB
+This partition ends after the disk limits. (start=952458912, size=1898312725, end=2850771636, disk end=1953525168)
+
+     Unknown                952874968  961501143    8626176
+     WBFS, 4416 MB / 4212 MiB
+Partition not added.
+
+     Unknown                953579984  955050447    1470464
+     WBFS, 752 MB / 718 MiB
+Partition not added.
+
+     Unknown                953656984  962225815    8568832
+     WBFS, 4387 MB / 4184 MiB
+Partition not added.
+
+     Unknown                953715608  960215959    6500352
+     WBFS, 3328 MB / 3174 MiB
+Partition not added.
+NTFS at 59475/11/25
+filesystem size           1898312725
+sectors_per_cluster       8
+mft_lcn                   786432
+mftmirr_lcn               2
+clusters_per_mft_record   -10
+clusters_per_index_record 1
+NTFS part_offset=489198895104, part_size=971936115200, sector_size=512
+NTFS partition cannot be added (part_offset<part_size).
+NTFS at 59475/11/25
+filesystem size           1898312725
+sectors_per_cluster       8
+mft_lcn                   786432
+mftmirr_lcn               2
+clusters_per_mft_record   -10
+clusters_per_index_record 1
+     MS Data                955466592 2853779316 1898312725
+     NTFS, blocksize=4096, 971 GB / 905 GiB
+This partition ends after the disk limits. (start=955466592, size=1898312725, end=2853779316, disk end=1953525168)
+
+     Unknown                955643568  963606191    7962624
+     WBFS, 4076 MB / 3888 MiB
+Partition not added.
+
+     Unknown                955870216  963677191    7806976
+     WBFS, 3997 MB / 3812 MiB
+Partition not added.
+NTFS at 59547/14/20
+filesystem size           1898312725
+sectors_per_cluster       8
+mft_lcn                   786432
+mftmirr_lcn               2
+clusters_per_mft_record   -10
+clusters_per_index_record 1
+NTFS part_offset=489791209472, part_size=971936115200, sector_size=512
+NTFS partition cannot be added (part_offset<part_size).
+NTFS at 59547/14/20
+filesystem size           1898312725
+sectors_per_cluster       8
+mft_lcn                   786432
+mftmirr_lcn               2
+clusters_per_mft_record   -10
+clusters_per_index_record 1
+     MS Data                956623456 2854936180 1898312725
+     NTFS, blocksize=4096, 971 GB / 905 GiB
+This partition ends after the disk limits. (start=956623456, size=1898312725, end=2854936180, disk end=1953525168)
+
+     Unknown                956853016  957795095     942080
+     WBFS, 482 MB / 460 MiB
+Partition not added.
+
+     Unknown                961227864  961993815     765952
+     WBFS, 392 MB / 374 MiB
+Partition not added.
+
+     Unknown                965391248  981230479   15839232
+     WBFS, 8109 MB / 7734 MiB
+Partition not added.
+
+     Unknown                965667184  972773743    7106560
+     WBFS, 3638 MB / 3470 MiB
+Partition not added.
+
+     Unknown                965668120  973839639    8171520
+     WBFS, 4183 MB / 3990 MiB
+Partition not added.
+
+     Unknown                965669624  972399351    6729728
+     WBFS, 3445 MB / 3286 MiB
+Partition not added.
+
+     Unknown                965729656  970337655    4608000
+     WBFS, 2359 MB / 2250 MiB
+Partition not added.
+
+     Unknown                965742744  967463063    1720320
+     WBFS, 880 MB / 840 MiB
+Partition not added.
+
+     Unknown                965760056  979416119   13656064
+     WBFS, 6991 MB / 6668 MiB
+Partition not added.
+
+     Unknown                965767752  972243527    6475776
+     WBFS, 3315 MB / 3162 MiB
+Partition not added.
+
+     Unknown                965768904  972572359    6803456
+     WBFS, 3483 MB / 3322 MiB
+Partition not added.
+
+     Unknown                965874256  973734479    7860224
+     WBFS, 4024 MB / 3838 MiB
+Partition not added.
+
+     Unknown                965911200  973795999    7884800
+     WBFS, 4037 MB / 3850 MiB
+Partition not added.
+NTFS at 60129/251/11
+heads/cylinder 16 (NTFS) != 255 (HD)
+sect/track 2 (NTFS) != 63 (HD)
+filesystem size           6174
+sectors_per_cluster       1
+mft_lcn                   2058
+mftmirr_lcn               5162
+clusters_per_mft_record   2
+clusters_per_index_record 8
+     MS Data                965982035  965988208       6174
+     NTFS found using backup sector, blocksize=512, 3161 KB / 3087 KiB
+NTFS at 60129/251/11
+heads/cylinder 16 (NTFS) != 255 (HD)
+sect/track 2 (NTFS) != 63 (HD)
+filesystem size           6174
+sectors_per_cluster       1
+mft_lcn                   2058
+mftmirr_lcn               5162
+clusters_per_mft_record   2
+clusters_per_index_record 8
+     MS Data                965988208  965994381       6174
+     NTFS, blocksize=512, 3161 KB / 3087 KiB
+
+     Unknown                966845272  969888599    3043328
+     WBFS, 1558 MB / 1486 MiB
+Partition not added.
+
+     Unknown                967224328  972446727    5222400
+     WBFS, 2673 MB / 2550 MiB
+Partition not added.
+
+     Unknown                967310664  967429447     118784
+     WBFS, 60 MB / 58 MiB
+Partition not added.
+
+     Unknown                968128152  968894103     765952
+     WBFS, 392 MB / 374 MiB
+Partition not added.
+
+     Unknown                968138648  969842583    1703936
+     WBFS, 872 MB / 832 MiB
+Partition not added.
+
+     Unknown                968204936  975008391    6803456
+     WBFS, 3483 MB / 3322 MiB
+Partition not added.
+
+     Unknown                968578088  976385063    7806976
+     WBFS, 3997 MB / 3812 MiB
+Partition not added.
+
+     Unknown                968673592  973281591    4608000
+     WBFS, 2359 MB / 2250 MiB
+Partition not added.
+
+     Unknown                968845272  977016791    8171520
+     WBFS, 4183 MB / 3990 MiB
+Partition not added.
+
+     Unknown                968957200  976817423    7860224
+     WBFS, 4024 MB / 3838 MiB
+Partition not added.
+
+     Unknown                968961112  977312855    8351744
+     WBFS, 4276 MB / 4078 MiB
+Partition not added.
+
+     Unknown                969060728  977629559    8568832
+     WBFS, 4387 MB / 4184 MiB
+Partition not added.
+
+     Unknown                969078744  975808471    6729728
+     WBFS, 3445 MB / 3286 MiB
+Partition not added.
+
+     Unknown                969079672  984726391   15646720
+     WBFS, 8011 MB / 7640 MiB
+Partition not added.
+
+     Unknown                969103984  972249711    3145728
+     WBFS, 1610 MB / 1536 MiB
+Partition not added.
+
+     Unknown                969104392  971742215    2637824
+     WBFS, 1350 MB / 1288 MiB
+Buffer can't store more than 200 lines.
+Partition not added.
+
+     Unknown                969105160  978071303    8966144
+     WBFS, 4590 MB / 4378 MiB
+Partition not added.
+
+     Unknown                969105432  973496343    4390912
+     WBFS, 2248 MB / 2144 MiB
+Partition not added.
+NTFS at 60325/75/7
+filesystem size           1898312725
+sectors_per_cluster       8
+mft_lcn                   786432
+mftmirr_lcn               2
+clusters_per_mft_record   -10
+clusters_per_index_record 1
+NTFS part_offset=496192438272, part_size=971936115200, sector_size=512
+NTFS partition cannot be added (part_offset<part_size).
+NTFS at 60325/75/7
+filesystem size           1898312725
+sectors_per_cluster       8
+mft_lcn                   786432
+mftmirr_lcn               2
+clusters_per_mft_record   -10
+clusters_per_index_record 1
+     MS Data                969125856 2867438580 1898312725
+     NTFS, blocksize=4096, 971 GB / 905 GiB
+This partition ends after the disk limits. (start=969125856, size=1898312725, end=2867438580, disk end=1953525168)
+
+     Unknown                969142288  977104911    7962624
+     WBFS, 4076 MB / 3888 MiB
+Partition not added.
+
+     Unknown                969567536  971021615    1454080
+     WBFS, 744 MB / 710 MiB
+Partition not added.
+
+     Unknown                969979560  970618535     638976
+     WBFS, 327 MB / 312 MiB
+Partition not added.
+
+     Unknown                973056720  980163279    7106560
+     WBFS, 3638 MB / 3470 MiB
+Partition not added.
+
+     Unknown                973940592  981636975    7696384
+     WBFS, 3940 MB / 3758 MiB
+Partition not added.
+NTFS at 60677/162/62
+filesystem size           1898312725
+sectors_per_cluster       8
+mft_lcn                   786432
+mftmirr_lcn               2
+clusters_per_mft_record   -10
+clusters_per_index_record 1
+NTFS part_offset=499090571264, part_size=971936115200, sector_size=512
+NTFS partition cannot be added (part_offset<part_size).
+NTFS at 60677/162/62
+filesystem size           1898312725
+sectors_per_cluster       8
+mft_lcn                   786432
+mftmirr_lcn               2
+clusters_per_mft_record   -10
+clusters_per_index_record 1
+     MS Data                974786272 2873098996 1898312725
+     NTFS, blocksize=4096, 971 GB / 905 GiB
+This partition ends after the disk limits. (start=974786272, size=1898312725, end=2873098996, disk end=1953525168)
+
+     Unknown                974786968  976146839    1359872
+     WBFS, 696 MB / 664 MiB
+Partition not added.
+
+     Unknown                974799080  979390695    4591616
+     WBFS, 2350 MB / 2242 MiB
+Partition not added.
+NTFS at 60679/69/23
+heads/cylinder 16 (NTFS) != 255 (HD)
+sect/track 2 (NTFS) != 63 (HD)
+filesystem size           6174
+sectors_per_cluster       1
+mft_lcn                   2058
+mftmirr_lcn               5162
+clusters_per_mft_record   2
+clusters_per_index_record 8
+     MS Data                974806331  974812504       6174
+     NTFS found using backup sector, blocksize=512, 3161 KB / 3087 KiB
+NTFS at 60679/69/23
+heads/cylinder 16 (NTFS) != 255 (HD)
+sect/track 2 (NTFS) != 63 (HD)
+filesystem size           6174
+sectors_per_cluster       1
+mft_lcn                   2058
+mftmirr_lcn               5162
+clusters_per_mft_record   2
+clusters_per_index_record 8
+     MS Data                974812504  974818677       6174
+     NTFS, blocksize=512, 3161 KB / 3087 KiB
+
+     Unknown                974904664  981405015    6500352
+     WBFS, 3328 MB / 3174 MiB
+Partition not added.
+
+     Unknown                975207896  983776727    8568832
+     WBFS, 4387 MB / 4184 MiB
+Partition not added.
+
+     Unknown                975210504  976099335     888832
+     WBFS, 455 MB / 434 MiB
+Partition not added.
+
+     Unknown                975218328  976160407     942080
+     WBFS, 482 MB / 460 MiB
+Partition not added.
+
+     Unknown                975218416  976983791    1765376
+     WBFS, 903 MB / 862 MiB
+Partition not added.
+
+     Unknown                975218640  975984591     765952
+     WBFS, 392 MB / 374 MiB
+Partition not added.
+
+     Unknown                975221136  976675215    1454080
+     WBFS, 744 MB / 710 MiB
+Partition not added.
+
+     Unknown                975228408  980229623    5001216
+     WBFS, 2560 MB / 2442 MiB
+Partition not added.
+
+     Unknown                975228472  983768631    8540160
+     WBFS, 4372 MB / 4170 MiB
+Partition not added.
+
+     Unknown                975229472  983753247    8523776
+     WBFS, 4364 MB / 4162 MiB
+Partition not added.
+
+     Unknown                975315832  981275511    5959680
+     WBFS, 3051 MB / 2910 MiB
+Partition not added.
+
+     Unknown                975317880  982801271    7483392
+     WBFS, 3831 MB / 3654 MiB
+Partition not added.
+
+     Unknown                975494536  983530887    8036352
+     WBFS, 4114 MB / 3924 MiB
+Partition not added.
+
+     Unknown                975500664  982603127    7102464
+     WBFS, 3636 MB / 3468 MiB
+Partition not added.
+
+     Unknown                975537296  976241807     704512
+     WBFS, 360 MB / 344 MiB
+Partition not added.
+
+     Unknown                975850328  981957463    6107136
+     WBFS, 3126 MB / 2982 MiB
+Partition not added.
+
+     Unknown                975859992  978612503    2752512
+     WBFS, 1409 MB / 1344 MiB
+Partition not added.
+
+     Unknown                975870328  982972791    7102464
+     WBFS, 3636 MB / 3468 MiB
+Partition not added.
+
+     Unknown                975909560  982143671    6234112
+     WBFS, 3191 MB / 3044 MiB
+Partition not added.
+
+     Unknown                975917144  980525143    4608000
+     WBFS, 2359 MB / 2250 MiB
+Partition not added.
+
+     Unknown                975918552  984073687    8155136
+     WBFS, 4175 MB / 3982 MiB
+Partition not added.
+
+     Unknown                975919576  981449175    5529600
+     WBFS, 2831 MB / 2700 MiB
+Partition not added.
+
+     Unknown                975922832  983557775    7634944
+     WBFS, 3909 MB / 3728 MiB
+Partition not added.
+
+     Unknown                975981040  982141423    6160384
+     WBFS, 3154 MB / 3008 MiB
+Partition not added.
+
+     Unknown                976160440  982890167    6729728
+     WBFS, 3445 MB / 3286 MiB
+Partition not added.
+
+     Unknown                976164568  976508631     344064
+     WBFS, 176 MB / 168 MiB
+Partition not added.
+
+     Unknown                976182280  984718343    8536064
+     WBFS, 4370 MB / 4168 MiB
+Partition not added.
+
+     Unknown                976205296  978576879    2371584
+     WBFS, 1214 MB / 1158 MiB
+Partition not added.
+
+     Unknown                976674480  976793263     118784
+     WBFS, 60 MB / 58 MiB
+Partition not added.
+
+     Unknown                976722104  981993655    5271552
+     WBFS, 2699 MB / 2574 MiB
+Partition not added.
+
+     Unknown                976736376  984907895    8171520
+     WBFS, 4183 MB / 3990 MiB
+Partition not added.
+
+     Unknown                976739928  979783255    3043328
+     WBFS, 1558 MB / 1486 MiB
+Partition not added.
+
+     Unknown                976744488  983220263    6475776
+     WBFS, 3315 MB / 3162 MiB
+Partition not added.
+
+     Unknown                976744648  979382471    2637824
+     WBFS, 1350 MB / 1288 MiB
+Partition not added.
+
+     Unknown                976744696  980639991    3895296
+     WBFS, 1994 MB / 1902 MiB
+Partition not added.
+
+     Unknown                976748376  984584023    7835648
+     WBFS, 4011 MB / 3826 MiB
+Partition not added.
+
+     Unknown                976749128  983396935    6647808
+     WBFS, 3403 MB / 3246 MiB
+Partition not added.
+
+     Unknown                976749240  977199799     450560
+     WBFS, 230 MB / 220 MiB
+Partition not added.
+
+     Unknown                976749264  984568527    7819264
+     WBFS, 4003 MB / 3818 MiB
+Partition not added.
+
+     Unknown                976749800  983606503    6856704
+     WBFS, 3510 MB / 3348 MiB
+Partition not added.
+FAT12 at 60803/132/34
+FAT1 : 1-9
+FAT2 : 10-18
+start_rootdir : 19
+Data : 33-2879
+sectors : 2880
+cluster_size : 1
+no_of_cluster : 2847 (2 - 2848)
+fat_length 9 calculated 9
+heads/cylinder 2 (FAT) != 255 (HD)
+sect/track 18 (FAT) != 63 (HD)
+
+FAT12 at 60803/132/34
+     MS Data                976808544  976811423       2880 [EFISECTOR]
+     FAT12, blocksize=512, 1474 KB / 1440 KiB
+
+     Unknown                976819432  984855783    8036352
+     WBFS, 4114 MB / 3924 MiB
+Partition not added.
+
+     Unknown                976845720  981494679    4648960
+     WBFS, 2380 MB / 2270 MiB
+Partition not added.
+
+     Unknown                976866168  981257079    4390912
+     WBFS, 2248 MB / 2144 MiB
+Partition not added.
+
+     Unknown                976867288  979898327    3031040
+     WBFS, 1551 MB / 1480 MiB
+Partition not added.
+
+     Unknown                976867368  992514087   15646720
+     WBFS, 8011 MB / 7640 MiB
+Partition not added.
+
+     Unknown                976944440  981577015    4632576
+     WBFS, 2371 MB / 2262 MiB
+Partition not added.
+
+     Unknown                976964648  982051879    5087232
+     WBFS, 2604 MB / 2484 MiB
+Partition not added.
+
+     Unknown                976985744  985214607    8228864
+     WBFS, 4213 MB / 4018 MiB
+Partition not added.
+
+     Unknown                977050136  986016279    8966144
+     WBFS, 4590 MB / 4378 MiB
+Partition not added.
+
+     Unknown                977071480  981900663    4829184
+     WBFS, 2472 MB / 2358 MiB
+Partition not added.
+
+LVM magic value at 60837/126/30
+
+     Unknown                978924104  982508103    3584000
+     WBFS, 1835 MB / 1750 MiB
+Partition not added.
+
+     Unknown                978926584  984198135    5271552
+     WBFS, 2699 MB / 2574 MiB
+Partition not added.
+
+     Unknown                978964376  987930519    8966144
+     WBFS, 4590 MB / 4378 MiB
+Partition not added.
+NTFS at 60937/229/61
+filesystem size           1898312725
+sectors_per_cluster       8
+mft_lcn                   786432
+mftmirr_lcn               2
+clusters_per_mft_record   -10
+clusters_per_index_record 1
+NTFS part_offset=501231304704, part_size=971936115200, sector_size=512
+NTFS partition cannot be added (part_offset<part_size).
+NTFS at 60937/229/61
+filesystem size           1898312725
+sectors_per_cluster       8
+mft_lcn                   786432
+mftmirr_lcn               2
+clusters_per_mft_record   -10
+clusters_per_index_record 1
+     MS Data                978967392 2877280116 1898312725
+     NTFS, blocksize=4096, 971 GB / 905 GiB
+This partition ends after the disk limits. (start=978967392, size=1898312725, end=2877280116, disk end=1953525168)
+NTFS at 60943/91/37
+heads/cylinder 16 (NTFS) != 255 (HD)
+sect/track 2 (NTFS) != 63 (HD)
+filesystem size           6174
+sectors_per_cluster       1
+mft_lcn                   2058
+mftmirr_lcn               5162
+clusters_per_mft_record   2
+clusters_per_index_record 8
+     MS Data                979048891  979055064       6174
+     NTFS found using backup sector, blocksize=512, 3161 KB / 3087 KiB
+NTFS at 60943/91/37
+heads/cylinder 16 (NTFS) != 255 (HD)
+sect/track 2 (NTFS) != 63 (HD)
+filesystem size           6174
+sectors_per_cluster       1
+mft_lcn                   2058
+mftmirr_lcn               5162
+clusters_per_mft_record   2
+clusters_per_index_record 8
+     MS Data                979055064  979061237       6174
+     NTFS, blocksize=512, 3161 KB / 3087 KiB
+
+     Unknown                979065656  984607543    5541888
+     WBFS, 2837 MB / 2706 MiB
+Partition not added.
+
+     Unknown                979227608  984499159    5271552
+     WBFS, 2699 MB / 2574 MiB
+Partition not added.
+
+     Unknown                979277208  982812055    3534848
+     WBFS, 1809 MB / 1726 MiB
+Partition not added.
+
+     Unknown                979364312  979814871     450560
+     WBFS, 230 MB / 220 MiB
+Partition not added.
+
+     Unknown                979367344  987186607    7819264
+     WBFS, 4003 MB / 3818 MiB
+Partition not added.
+
+     Unknown                979382264  980324343     942080
+     WBFS, 482 MB / 460 MiB
+Partition not added.
+
+     Unknown                979382552  985882903    6500352
+     WBFS, 3328 MB / 3174 MiB
+Partition not added.
+NTFS at 60983/54/16
+heads/cylinder 16 (NTFS) != 255 (HD)
+sect/track 2 (NTFS) != 63 (HD)
+filesystem size           6174
+sectors_per_cluster       1
+mft_lcn                   2058
+mftmirr_lcn               5162
+clusters_per_mft_record   2
+clusters_per_index_record 8
+     MS Data                979689139  979695312       6174
+     NTFS found using backup sector, blocksize=512, 3161 KB / 3087 KiB
+NTFS at 60983/54/16
+heads/cylinder 16 (NTFS) != 255 (HD)
+sect/track 2 (NTFS) != 63 (HD)
+filesystem size           6174
+sectors_per_cluster       1
+mft_lcn                   2058
+mftmirr_lcn               5162
+clusters_per_mft_record   2
+clusters_per_index_record 8
+     MS Data                979695312  979701485       6174
+     NTFS, blocksize=512, 3161 KB / 3087 KiB
+
+     Unknown                979727288  985834423    6107136
+     WBFS, 3126 MB / 2982 MiB
+Partition not added.
+
+     Unknown                980238736  987873679    7634944
+     WBFS, 3909 MB / 3728 MiB
+Partition not added.
+
+     Unknown                980581016  989158039    8577024
+     WBFS, 4391 MB / 4188 MiB
+Partition not added.
+
+     Unknown                980584440  989124599    8540160
+     WBFS, 4372 MB / 4170 MiB
+Partition not added.
+NTFS at 61047/161/59
+heads/cylinder 16 (NTFS) != 255 (HD)
+sect/track 2 (NTFS) != 63 (HD)
+filesystem size           6174
+sectors_per_cluster       1
+mft_lcn                   2058
+mftmirr_lcn               5162
+clusters_per_mft_record   2
+clusters_per_index_record 8
+     MS Data                980724083  980730256       6174
+     NTFS found using backup sector, blocksize=512, 3161 KB / 3087 KiB
+NTFS at 61047/161/59
+heads/cylinder 16 (NTFS) != 255 (HD)
+sect/track 2 (NTFS) != 63 (HD)
+filesystem size           6174
+sectors_per_cluster       1
+mft_lcn                   2058
+mftmirr_lcn               5162
+clusters_per_mft_record   2
+clusters_per_index_record 8
+     MS Data                980730256  980736429       6174
+     NTFS, blocksize=512, 3161 KB / 3087 KiB
+
+     Unknown                980791976  988828327    8036352
+     WBFS, 4114 MB / 3924 MiB
+Partition not added.
+
+     Unknown                980829328  996668559   15839232
+     WBFS, 8109 MB / 7734 MiB
+Partition not added.
+NTFS at 61069/87/11
+filesystem size           1898312725
+sectors_per_cluster       8
+mft_lcn                   786432
+mftmirr_lcn               2
+clusters_per_mft_record   -10
+clusters_per_index_record 1
+NTFS part_offset=502312435712, part_size=971936115200, sector_size=512
+NTFS partition cannot be added (part_offset<part_size).
+NTFS at 61069/87/11
+filesystem size           1898312725
+sectors_per_cluster       8
+mft_lcn                   786432
+mftmirr_lcn               2
+clusters_per_mft_record   -10
+clusters_per_index_record 1
+     MS Data                981078976 2879391700 1898312725
+     NTFS, blocksize=4096, 971 GB / 905 GiB
+This partition ends after the disk limits. (start=981078976, size=1898312725, end=2879391700, disk end=1953525168)
+
+     Unknown                981987528  982732999     745472
+     WBFS, 381 MB / 364 MiB
+Partition not added.
+FAT12 at 61135/72/58
+FAT1 : 1-9
+FAT2 : 10-18
+start_rootdir : 19
+Data : 33-2879
+sectors : 2880
+cluster_size : 1
+no_of_cluster : 2847 (2 - 2848)
+fat_length 9 calculated 9
+heads/cylinder 2 (FAT) != 255 (HD)
+sect/track 18 (FAT) != 63 (HD)
+
+FAT12 at 61135/72/58
+     MS Data                982138368  982141247       2880 [EFISECTOR]
+     FAT12, blocksize=512, 1474 KB / 1440 KiB
+FAT12 at 61148/89/30
+FAT1 : 1-9
+FAT2 : 10-18
+start_rootdir : 19
+Data : 33-2879
+sectors : 2880
+cluster_size : 1
+no_of_cluster : 2847 (2 - 2848)
+fat_length 9 calculated 9
+heads/cylinder 2 (FAT) != 255 (HD)
+sect/track 18 (FAT) != 63 (HD)
+
+FAT12 at 61148/89/30
+     MS Data                982348256  982351135       2880 [EFISECTOR]
+     FAT12, blocksize=512, 1474 KB / 1440 KiB
+
+HFS magic value at 61150/22/55
+part_size 234881282
+     Mac HFS                982376190 1217257471  234881282
+     HFS blocksize=33554432, 120 GB / 112 GiB
+
+HFS magic value at 61150/22/57
+part_size 234881282
+     Mac HFS                747494912  982376193  234881282
+     HFS found using backup sector!, 120 GB / 112 GiB
+
+     Unknown                982585496  987857047    5271552
+     WBFS, 2699 MB / 2574 MiB
+Partition not added.
+NTFS at 61172/57/22
+heads/cylinder 16 (NTFS) != 255 (HD)
+sect/track 2 (NTFS) != 63 (HD)
+filesystem size           6174
+sectors_per_cluster       1
+mft_lcn                   2058
+mftmirr_lcn               5162
+clusters_per_mft_record   2
+clusters_per_index_record 8
+     MS Data                982725619  982731792       6174
+     NTFS found using backup sector, blocksize=512, 3161 KB / 3087 KiB
+NTFS at 61172/57/22
+heads/cylinder 16 (NTFS) != 255 (HD)
+sect/track 2 (NTFS) != 63 (HD)
+filesystem size           6174
+sectors_per_cluster       1
+mft_lcn                   2058
+mftmirr_lcn               5162
+clusters_per_mft_record   2
+clusters_per_index_record 8
+     MS Data                982731792  982737965       6174
+     NTFS, blocksize=512, 3161 KB / 3087 KiB
+FAT12 at 61186/25/24
+FAT1 : 1-9
+FAT2 : 10-18
+start_rootdir : 19
+Data : 33-2879
+sectors : 2880
+cluster_size : 1
+no_of_cluster : 2847 (2 - 2848)
+fat_length 9 calculated 9
+heads/cylinder 2 (FAT) != 255 (HD)
+sect/track 18 (FAT) != 63 (HD)
+
+FAT12 at 61186/25/24
+     MS Data                982954688  982957567       2880 [EFISECTOR]
+     FAT12, blocksize=512, 1474 KB / 1440 KiB
+
+LVM magic value at 61220/76/44
+
+     Unknown                983593776  991290159    7696384
+     WBFS, 3940 MB / 3758 MiB
+Partition not added.
+
+     Unknown                983895984  988704687    4808704
+     WBFS, 2462 MB / 2348 MiB
+Partition not added.
+
+     Unknown                984126536  988718151    4591616
+     WBFS, 2350 MB / 2242 MiB
+Partition not added.
+
+     Unknown                984622808  985982679    1359872
+     WBFS, 696 MB / 664 MiB
+Partition not added.
+FAT12 at 61293/184/12
+FAT1 : 1-9
+FAT2 : 10-18
+start_rootdir : 19
+Data : 33-2879
+sectors : 2880
+cluster_size : 1
+no_of_cluster : 2847 (2 - 2848)
+fat_length 9 calculated 9
+heads/cylinder 2 (FAT) != 255 (HD)
+sect/track 18 (FAT) != 63 (HD)
+
+FAT12 at 61293/184/12
+     MS Data                984683648  984686527       2880 [EFISECTOR]
+     FAT12, blocksize=512, 1474 KB / 1440 KiB
+NTFS at 61309/16/12
+heads/cylinder 16 (NTFS) != 255 (HD)
+sect/track 2 (NTFS) != 63 (HD)
+filesystem size           6174
+sectors_per_cluster       1
+mft_lcn                   2058
+mftmirr_lcn               5162
+clusters_per_mft_record   2
+clusters_per_index_record 8
+     MS Data                984923931  984930104       6174
+     NTFS found using backup sector, blocksize=512, 3161 KB / 3087 KiB
+NTFS at 61309/16/12
+heads/cylinder 16 (NTFS) != 255 (HD)
+sect/track 2 (NTFS) != 63 (HD)
+filesystem size           6174
+sectors_per_cluster       1
+mft_lcn                   2058
+mftmirr_lcn               5162
+clusters_per_mft_record   2
+clusters_per_index_record 8
+     MS Data                984930104  984936277       6174
+     NTFS, blocksize=512, 3161 KB / 3087 KiB
+
+     Unknown                984958104  988853399    3895296
+     WBFS, 1994 MB / 1902 MiB
+Partition not added.
+NTFS at 61345/165/21
+heads/cylinder 16 (NTFS) != 255 (HD)
+sect/track 2 (NTFS) != 63 (HD)
+filesystem size           6174
+sectors_per_cluster       1
+mft_lcn                   2058
+mftmirr_lcn               5162
+clusters_per_mft_record   2
+clusters_per_index_record 8
+     MS Data                985511667  985517840       6174
+     NTFS found using backup sector, blocksize=512, 3161 KB / 3087 KiB
+NTFS at 61345/165/21
+heads/cylinder 16 (NTFS) != 255 (HD)
+sect/track 2 (NTFS) != 63 (HD)
+filesystem size           6174
+sectors_per_cluster       1
+mft_lcn                   2058
+mftmirr_lcn               5162
+clusters_per_mft_record   2
+clusters_per_index_record 8
+     MS Data                985517840  985524013       6174
+     NTFS, blocksize=512, 3161 KB / 3087 KiB
+NTFS at 61415/67/13
+heads/cylinder 16 (NTFS) != 255 (HD)
+sect/track 2 (NTFS) != 63 (HD)
+filesystem size           6174
+sectors_per_cluster       1
+mft_lcn                   2058
+mftmirr_lcn               5162
+clusters_per_mft_record   2
+clusters_per_index_record 8
+     MS Data                986630035  986636208       6174
+     NTFS found using backup sector, blocksize=512, 3161 KB / 3087 KiB
+NTFS at 61415/67/13
+heads/cylinder 16 (NTFS) != 255 (HD)
+sect/track 2 (NTFS) != 63 (HD)
+filesystem size           6174
+sectors_per_cluster       1
+mft_lcn                   2058
+mftmirr_lcn               5162
+clusters_per_mft_record   2
+clusters_per_index_record 8
+     MS Data                986636208  986642381       6174
+     NTFS, blocksize=512, 3161 KB / 3087 KiB
+
+     Unknown                986769048  987461271     692224
+     WBFS, 354 MB / 338 MiB
+Partition not added.
+
+     Unknown                987235032  992776919    5541888
+     WBFS, 2837 MB / 2706 MiB
+Partition not added.
+
+     Unknown                987235064  992236279    5001216
+     WBFS, 2560 MB / 2442 MiB
+Partition not added.
+
+     Unknown                987235216  991376271    4141056
+     WBFS, 2120 MB / 2022 MiB
+Partition not added.
+
+     Unknown                987247768  996213911    8966144
+     WBFS, 4590 MB / 4378 MiB
+Partition not added.
+
+     Unknown                987324784  990470511    3145728
+     WBFS, 1610 MB / 1536 MiB
+Partition not added.
+
+     Unknown                987351408  993511791    6160384
+     WBFS, 3154 MB / 3008 MiB
+Partition not added.
+
+     Unknown                987362056  989999879    2637824
+     WBFS, 1350 MB / 1288 MiB
+Partition not added.
+FAT12 at 61460/147/16
+FAT1 : 1-9
+FAT2 : 10-18
+start_rootdir : 19
+Data : 33-2879
+sectors : 2880
+cluster_size : 1
+no_of_cluster : 2847 (2 - 2848)
+fat_length 9 calculated 9
+FAT differs, FAT sectors=0-9/9
+heads/cylinder 2 (FAT) != 255 (HD)
+sect/track 18 (FAT) != 63 (HD)
+
+FAT12 at 61460/147/16
+     MS Data                987364176  987367055       2880 [EFISECTOR]
+     FAT12, blocksize=512, 1474 KB / 1440 KiB
+
+     Unknown                987474160  989239535    1765376
+     WBFS, 903 MB / 862 MiB
+Partition not added.
+
+     Unknown                987475400  996011463    8536064
+     WBFS, 4370 MB / 4168 MiB
+Partition not added.
+
+     Unknown                987476248  995631383    8155136
+     WBFS, 4175 MB / 3982 MiB
+Partition not added.
+
+     Unknown                987477208  994960599    7483392
+     WBFS, 3831 MB / 3654 MiB
+Partition not added.
+
+     Unknown                987483480  988843351    1359872
+     WBFS, 696 MB / 664 MiB
+Partition not added.
+
+     Unknown                987485016  996111191    8626176
+     WBFS, 4416 MB / 4212 MiB
+Partition not added.
+
+     Unknown                987485272  993444951    5959680
+     WBFS, 3051 MB / 2910 MiB
+Partition not added.
+
+     Unknown                987487720 1003134439   15646720
+     WBFS, 8011 MB / 7640 MiB
+Partition not added.
+
+     Unknown                987487784  994827815    7340032
+     WBFS, 3758 MB / 3584 MiB
+Partition not added.
+
+     Unknown                987488888  988430967     942080
+     WBFS, 482 MB / 460 MiB
+Partition not added.
+
+     Unknown                987489720  995800503    8310784
+     WBFS, 4255 MB / 4058 MiB
+Partition not added.
+
+     Unknown                987489800  990213639    2723840
+     WBFS, 1394 MB / 1330 MiB
+Partition not added.
+
+     Unknown                987491728  995720591    8228864
+     WBFS, 4213 MB / 4018 MiB
+Partition not added.
+
+LVM magic value at 61468/240/5
+
+     Unknown                987499384  992107383    4608000
+     WBFS, 2359 MB / 2250 MiB
+Partition not added.
+
+     Unknown                987500120  996077143    8577024
+     WBFS, 4391 MB / 4188 MiB
+Partition not added.
+
+     Unknown                987532104  994007879    6475776
+     WBFS, 3315 MB / 3162 MiB
+Partition not added.
+
+     Unknown                987537352  990752711    3215360
+     WBFS, 1646 MB / 1570 MiB
+Partition not added.
+
+     Unknown                987537432  995844119    8306688
+     WBFS, 4253 MB / 4056 MiB
+Partition not added.
+
+     Unknown                987539848  995346823    7806976
+     WBFS, 3997 MB / 3812 MiB
+Partition not added.
+
+     Unknown                987540176  988306127     765952
+     WBFS, 392 MB / 374 MiB
+Partition not added.
+
+     Unknown                987540328  994188135    6647808
+     WBFS, 3403 MB / 3246 MiB
+Partition not added.
+
+     Unknown                987540408  994642871    7102464
+     WBFS, 3636 MB / 3468 MiB
+Partition not added.
+
+     Unknown                987542896  994501999    6959104
+     WBFS, 3563 MB / 3398 MiB
+Partition not added.
+
+     Unknown                987545304 1001201367   13656064
+     WBFS, 6991 MB / 6668 MiB
+Partition not added.
+
+     Unknown                987547320  989017783    1470464
+     WBFS, 752 MB / 718 MiB
+Partition not added.
+
+     Unknown                987547368  991327975    3780608
+     WBFS, 1935 MB / 1846 MiB
+Partition not added.
+FAT12 at 69665/102/38
+FAT1 : 1-9
+FAT2 : 10-18
+start_rootdir : 19
+Data : 33-2879
+sectors : 2880
+cluster_size : 1
+no_of_cluster : 2847 (2 - 2848)
+fat_length 9 calculated 9
+heads/cylinder 2 (FAT) != 255 (HD)
+sect/track 18 (FAT) != 63 (HD)
+
+FAT12 at 69665/102/38
+     MS Data               1119174688 1119177567       2880 [EFISECTOR]
+     FAT12, blocksize=512, 1474 KB / 1440 KiB
+
+     Unknown               1119927480 1121631415    1703936
+     WBFS, 872 MB / 832 MiB
+Partition not added.
+
+     Unknown               1120006264 1125548151    5541888
+     WBFS, 2837 MB / 2706 MiB
+Partition not added.
+
+     Unknown               1120251128 1121991927    1740800
+     WBFS, 891 MB / 850 MiB
+Partition not added.
+
+     Unknown               1120315688 1129175335    8859648
+     WBFS, 4536 MB / 4326 MiB
+Partition not added.
+
+     Unknown               1120361192 1124952807    4591616
+     WBFS, 2350 MB / 2242 MiB
+Partition not added.
+
+     Unknown               1120430248 1121175719     745472
+     WBFS, 381 MB / 364 MiB
+Partition not added.
+
+     Unknown               1120506008 1127829655    7323648
+     WBFS, 3749 MB / 3576 MiB
+Partition not added.
+
+     Unknown               1120506064 1122902223    2396160
+     WBFS, 1226 MB / 1170 MiB
+Partition not added.
+
+     Unknown               1120560880 1126405871    5844992
+     WBFS, 2992 MB / 2854 MiB
+Partition not added.
+
+     Unknown               1120574832 1124081007    3506176
+     WBFS, 1795 MB / 1712 MiB
+Partition not added.
+
+     Unknown               1120575736 1126101239    5525504
+     WBFS, 2829 MB / 2698 MiB
+Partition not added.
+
+     Unknown               1120582800 1125391503    4808704
+     WBFS, 2462 MB / 2348 MiB
+Partition not added.
+
+     Unknown               1120617272 1122714423    2097152
+     WBFS, 1073 MB / 1024 MiB
+Partition not added.
+
+     Unknown               1121117736 1123841575    2723840
+     WBFS, 1394 MB / 1330 MiB
+Partition not added.
+
+     Unknown               1125348984 1127052919    1703936
+     WBFS, 872 MB / 832 MiB
+Partition not added.
+NTFS at 70050/55/46
+heads/cylinder 16 (NTFS) != 255 (HD)
+sect/track 2 (NTFS) != 63 (HD)
+filesystem size           6174
+sectors_per_cluster       1
+mft_lcn                   2058
+mftmirr_lcn               5162
+clusters_per_mft_record   2
+clusters_per_index_record 8
+     MS Data               1125350587 1125356760       6174
+     NTFS found using backup sector, blocksize=512, 3161 KB / 3087 KiB
+NTFS at 70050/55/46
+heads/cylinder 16 (NTFS) != 255 (HD)
+sect/track 2 (NTFS) != 63 (HD)
+filesystem size           6174
+sectors_per_cluster       1
+mft_lcn                   2058
+mftmirr_lcn               5162
+clusters_per_mft_record   2
+clusters_per_index_record 8
+     MS Data               1125356760 1125362933       6174
+     NTFS, blocksize=512, 3161 KB / 3087 KiB
+NTFS at 70053/26/14
+heads/cylinder 16 (NTFS) != 255 (HD)
+sect/track 2 (NTFS) != 63 (HD)
+filesystem size           6174
+sectors_per_cluster       1
+mft_lcn                   2058
+mftmirr_lcn               5162
+clusters_per_mft_record   2
+clusters_per_index_record 8
+     MS Data               1125396923 1125403096       6174
+     NTFS found using backup sector, blocksize=512, 3161 KB / 3087 KiB
+NTFS at 70053/26/14
+heads/cylinder 16 (NTFS) != 255 (HD)
+sect/track 2 (NTFS) != 63 (HD)
+filesystem size           6174
+sectors_per_cluster       1
+mft_lcn                   2058
+mftmirr_lcn               5162
+clusters_per_mft_record   2
+clusters_per_index_record 8
+     MS Data               1125403096 1125409269       6174
+     NTFS, blocksize=512, 3161 KB / 3087 KiB
+
+     Unknown               1125962104 1134133623    8171520
+     WBFS, 4183 MB / 3990 MiB
+Partition not added.
+
+     Unknown               1126654184 1133301991    6647808
+     WBFS, 3403 MB / 3246 MiB
+Partition not added.
+
+     Unknown               1127044728 1128404599    1359872
+     WBFS, 696 MB / 664 MiB
+Partition not added.
+
+     Unknown               1127319384 1135155031    7835648
+     WBFS, 4011 MB / 3826 MiB
+Partition not added.
+
+     Unknown               1127327064 1130370391    3043328
+     WBFS, 1558 MB / 1486 MiB
+Partition not added.
+FAT12 at 70176/6/23
+FAT1 : 1-9
+FAT2 : 10-18
+start_rootdir : 19
+Data : 33-2879
+sectors : 2880
+cluster_size : 1
+no_of_cluster : 2847 (2 - 2848)
+fat_length 9 calculated 9
+FAT differs, FAT sectors=0-9/9
+heads/cylinder 2 (FAT) != 255 (HD)
+sect/track 18 (FAT) != 63 (HD)
+
+FAT12 at 70176/6/23
+     MS Data               1127377840 1127380719       2880 [EFISECTOR]
+     FAT12, blocksize=512, 1474 KB / 1440 KiB
+
+     Unknown               1127790392 1128482615     692224
+     WBFS, 354 MB / 338 MiB
+Partition not added.
+
+     Unknown               1127805448 1128542727     737280
+     WBFS, 377 MB / 360 MiB
+Partition not added.
+
+     Unknown               1127880808 1128519783     638976
+     WBFS, 327 MB / 312 MiB
+Partition not added.
+
+     Unknown               1128078392 1136647223    8568832
+     WBFS, 4387 MB / 4184 MiB
+Partition not added.
+
+     Unknown               1128083992 1132716567    4632576
+     WBFS, 2371 MB / 2262 MiB
+Partition not added.
+
+     Unknown               1128116888 1135219351    7102464
+     WBFS, 3636 MB / 3468 MiB
+Partition not added.
+
+     Unknown               1128121808 1130493391    2371584
+     WBFS, 1214 MB / 1158 MiB
+Partition not added.
+
+     Unknown               1128123960 1141780023   13656064
+     WBFS, 6991 MB / 6668 MiB
+Partition not added.
+
+     Unknown               1128732360 1129256647     524288
+     WBFS, 268 MB / 256 MiB
+Partition not added.
+
+     Unknown               1128830440 1136866791    8036352
+     WBFS, 4114 MB / 3924 MiB
+Partition not added.
+
+     Unknown               1128831536 1129597487     765952
+     WBFS, 392 MB / 374 MiB
+Partition not added.
+
+     Unknown               1128835960 1133443959    4608000
+     WBFS, 2359 MB / 2250 MiB
+Partition not added.
+
+     Unknown               1128836616 1136176647    7340032
+     WBFS, 3758 MB / 3584 MiB
+Partition not added.
+
+     Unknown               1128836696 1134796375    5959680
+     WBFS, 3051 MB / 2910 MiB
+Partition not added.
+
+     Unknown               1128836840 1132052199    3215360
+     WBFS, 1646 MB / 1570 MiB
+Partition not added.
+
+     Unknown               1128846456 1135576183    6729728
+     WBFS, 3445 MB / 3286 MiB
+Partition not added.
+
+     Unknown               1128849616 1136484559    7634944
+     WBFS, 3909 MB / 3728 MiB
+Partition not added.
+
+     Unknown               1128852368 1130617743    1765376
+     WBFS, 903 MB / 862 MiB
+Partition not added.
+
+     Unknown               1128853304 1134960439    6107136
+     WBFS, 3126 MB / 2982 MiB
+Partition not added.
+
+LVM magic value at 70267/241/39
+NTFS at 70274/207/46
+heads/cylinder 16 (NTFS) != 255 (HD)
+sect/track 2 (NTFS) != 63 (HD)
+filesystem size           6174
+sectors_per_cluster       1
+mft_lcn                   2058
+mftmirr_lcn               5162
+clusters_per_mft_record   2
+clusters_per_index_record 8
+     MS Data               1128958723 1128964896       6174
+     NTFS found using backup sector, blocksize=512, 3161 KB / 3087 KiB
+NTFS at 70274/207/46
+heads/cylinder 16 (NTFS) != 255 (HD)
+sect/track 2 (NTFS) != 63 (HD)
+filesystem size           6174
+sectors_per_cluster       1
+mft_lcn                   2058
+mftmirr_lcn               5162
+clusters_per_mft_record   2
+clusters_per_index_record 8
+     MS Data               1128964896 1128971069       6174
+     NTFS, blocksize=512, 3161 KB / 3087 KiB
+
+     Unknown               1128975936 1129262655     286720
+     WBFS, 146 MB / 140 MiB
+Partition not added.
+
+     Unknown               1128976272 1136795535    7819264
+     WBFS, 4003 MB / 3818 MiB
+Partition not added.
+
+     Unknown               1128980528 1135140911    6160384
+     WBFS, 3154 MB / 3008 MiB
+Partition not added.
+
+     Unknown               1128980920 1132011959    3031040
+     WBFS, 1551 MB / 1480 MiB
+Partition not added.
+
+     Unknown               1128981272 1133630231    4648960
+     WBFS, 2380 MB / 2270 MiB
+Partition not added.
+
+     Unknown               1128981680 1130042543    1060864
+     WBFS, 543 MB / 518 MiB
+Partition not added.
+
+     Unknown               1128993912 1132528759    3534848
+     WBFS, 1809 MB / 1726 MiB
+Partition not added.
+
+     Unknown               1128994520 1130464983    1470464
+     WBFS, 752 MB / 718 MiB
+Partition not added.
+NTFS at 70295/7/49
+filesystem size           1898312725
+sectors_per_cluster       8
+mft_lcn                   786432
+mftmirr_lcn               2
+clusters_per_mft_record   -10
+clusters_per_index_record 1
+NTFS part_offset=578196307968, part_size=971936115200, sector_size=512
+NTFS partition cannot be added (part_offset<part_size).
+NTFS at 70295/7/49
+filesystem size           1898312725
+sectors_per_cluster       8
+mft_lcn                   786432
+mftmirr_lcn               2
+clusters_per_mft_record   -10
+clusters_per_index_record 1
+     MS Data               1129289664 3027602388 1898312725
+     NTFS, blocksize=4096, 971 GB / 905 GiB
+This partition ends after the disk limits. (start=1129289664, size=1898312725, end=3027602388, disk end=1953525168)
+
+     Unknown               1129325272 1131066071    1740800
+     WBFS, 891 MB / 850 MiB
+Partition not added.
+
+     Unknown               1129360144 1134168847    4808704
+     WBFS, 2462 MB / 2348 MiB
+Partition not added.
+
+     Unknown               1129450872 1135951223    6500352
+     WBFS, 3328 MB / 3174 MiB
+Partition not added.
+
+     Unknown               1129471672 1135013559    5541888
+     WBFS, 2837 MB / 2706 MiB
+Partition not added.
+NTFS at 118357/65/1
+filesystem size           1898312725
+sectors_per_cluster       8
+mft_lcn                   786432
+mftmirr_lcn               2
+clusters_per_mft_record   -10
+clusters_per_index_record 1
+     MS Data                  3096576 1901409300 1898312725
+     NTFS found using backup sector, blocksize=4096, 971 GB / 905 GiB
+NTFS at 118357/65/1
+filesystem size           1898312725
+sectors_per_cluster       8
+mft_lcn                   786432
+mftmirr_lcn               2
+clusters_per_mft_record   -10
+clusters_per_index_record 1
+     MS Data               1901409300 3799722024 1898312725
+     NTFS, blocksize=4096, 971 GB / 905 GiB
+This partition ends after the disk limits. (start=1901409300, size=1898312725, end=3799722024, disk end=1953525168)
+NTFS at 118357/80/60
+filesystem size           1755136
+sectors_per_cluster       8
+mft_lcn                   73130
+mftmirr_lcn               2
+clusters_per_mft_record   -10
+clusters_per_index_record 1
+     MS Data               1899655169 1901410304    1755136
+     NTFS found using backup sector, blocksize=4096, 898 MB / 857 MiB
+NTFS at 118357/80/60
+filesystem size           1755136
+sectors_per_cluster       8
+mft_lcn                   73130
+mftmirr_lcn               2
+clusters_per_mft_record   -10
+clusters_per_index_record 1
+     MS Data               1901410304 1903165439    1755136
+     NTFS, blocksize=4096, 898 MB / 857 MiB
+NTFS at 118403/151/45
+heads/cylinder 16 (NTFS) != 255 (HD)
+sect/track 2 (NTFS) != 63 (HD)
+filesystem size           6174
+sectors_per_cluster       1
+mft_lcn                   2058
+mftmirr_lcn               5162
+clusters_per_mft_record   2
+clusters_per_index_record 8
+     MS Data               1902147579 1902153752       6174
+     NTFS found using backup sector, blocksize=512, 3161 KB / 3087 KiB
+NTFS at 118403/151/45
+heads/cylinder 16 (NTFS) != 255 (HD)
+sect/track 2 (NTFS) != 63 (HD)
+filesystem size           6174
+sectors_per_cluster       1
+mft_lcn                   2058
+mftmirr_lcn               5162
+clusters_per_mft_record   2
+clusters_per_index_record 8
+     MS Data               1902153752 1902159925       6174 [Boot]
+     NTFS, blocksize=512, 3161 KB / 3087 KiB
+NTFS at 118466/145/15
+filesystem size           1755136
+sectors_per_cluster       8
+mft_lcn                   73130
+mftmirr_lcn               2
+clusters_per_mft_record   -10
+clusters_per_index_record 1
+     MS Data               1901410304 1903165439    1755136
+     NTFS found using backup sector, blocksize=4096, 898 MB / 857 MiB
+NTFS at 118466/145/15
+filesystem size           1755136
+sectors_per_cluster       8
+mft_lcn                   73130
+mftmirr_lcn               2
+clusters_per_mft_record   -10
+clusters_per_index_record 1
+     MS Data               1903165439 1904920574    1755136
+     NTFS, blocksize=4096, 898 MB / 857 MiB
+NTFS at 118466/145/16
+filesystem size           50358272
+sectors_per_cluster       8
+mft_lcn                   786432
+mftmirr_lcn               2
+clusters_per_mft_record   -10
+clusters_per_index_record 1
+     MS Data               1852807169 1903165440   50358272
+     NTFS found using backup sector, blocksize=4096, 25 GB / 24 GiB
+NTFS at 118466/145/16
+filesystem size           50358272
+sectors_per_cluster       8
+mft_lcn                   786432
+mftmirr_lcn               2
+clusters_per_mft_record   -10
+clusters_per_index_record 1
+     MS Data               1903165440 1953523711   50358272
+     NTFS, blocksize=4096, 25 GB / 24 GiB
+NTFS at 118473/208/8
+filesystem size           1755136
+sectors_per_cluster       8
+mft_lcn                   73130
+mftmirr_lcn               2
+clusters_per_mft_record   -10
+clusters_per_index_record 1
+     MS Data               1901526721 1903281856    1755136
+     NTFS found using backup sector, blocksize=4096, 898 MB / 857 MiB
+NTFS at 118473/208/8
+filesystem size           1755136
+sectors_per_cluster       8
+mft_lcn                   73130
+mftmirr_lcn               2
+clusters_per_mft_record   -10
+clusters_per_index_record 1
+     MS Data               1903281856 1905036991    1755136
+     NTFS, blocksize=4096, 898 MB / 857 MiB
+NTFS at 118865/6/30
+heads/cylinder 16 (NTFS) != 255 (HD)
+sect/track 2 (NTFS) != 63 (HD)
+filesystem size           6174
+sectors_per_cluster       1
+mft_lcn                   2058
+mftmirr_lcn               5162
+clusters_per_mft_record   2
+clusters_per_index_record 8
+     MS Data               1909560459 1909566632       6174
+     NTFS found using backup sector, blocksize=512, 3161 KB / 3087 KiB
+NTFS at 118865/6/30
+heads/cylinder 16 (NTFS) != 255 (HD)
+sect/track 2 (NTFS) != 63 (HD)
+filesystem size           6174
+sectors_per_cluster       1
+mft_lcn                   2058
+mftmirr_lcn               5162
+clusters_per_mft_record   2
+clusters_per_index_record 8
+     MS Data               1909566632 1909572805       6174 [Boot]
+     NTFS, blocksize=512, 3161 KB / 3087 KiB
+NTFS at 118866/111/22
+heads/cylinder 16 (NTFS) != 255 (HD)
+sect/track 2 (NTFS) != 63 (HD)
+filesystem size           6174
+sectors_per_cluster       1
+mft_lcn                   2058
+mftmirr_lcn               5162
+clusters_per_mft_record   2
+clusters_per_index_record 8
+     MS Data               1909583131 1909589304       6174
+     NTFS found using backup sector, blocksize=512, 3161 KB / 3087 KiB
+NTFS at 118866/111/22
+heads/cylinder 16 (NTFS) != 255 (HD)
+sect/track 2 (NTFS) != 63 (HD)
+filesystem size           6174
+sectors_per_cluster       1
+mft_lcn                   2058
+mftmirr_lcn               5162
+clusters_per_mft_record   2
+clusters_per_index_record 8
+     MS Data               1909589304 1909595477       6174 [Boot]
+     NTFS, blocksize=512, 3161 KB / 3087 KiB
+FAT12 at 118869/64/20
+FAT1 : 1-9
+FAT2 : 10-18
+start_rootdir : 19
+Data : 33-2879
+sectors : 2880
+cluster_size : 1
+no_of_cluster : 2847 (2 - 2848)
+fat_length 9 calculated 9
+heads/cylinder 2 (FAT) != 255 (HD)
+sect/track 18 (FAT) != 63 (HD)
+
+FAT12 at 118869/64/20
+     MS Data               1909634536 1909637415       2880 [EFISECTOR]
+     FAT12, blocksize=512, 1474 KB / 1440 KiB
+FAT12 at 118869/110/2
+FAT1 : 1-9
+FAT2 : 10-18
+start_rootdir : 19
+Data : 33-2879
+sectors : 2880
+cluster_size : 1
+no_of_cluster : 2847 (2 - 2848)
+fat_length 9 calculated 9
+heads/cylinder 2 (FAT) != 255 (HD)
+sect/track 18 (FAT) != 63 (HD)
+
+FAT12 at 118869/110/2
+     MS Data               1909637416 1909640295       2880 [EFISECTOR]
+     FAT12, blocksize=512, 1474 KB / 1440 KiB
+FAT12 at 118869/155/47
+FAT1 : 1-9
+FAT2 : 10-18
+start_rootdir : 19
+Data : 33-2879
+sectors : 2880
+cluster_size : 1
+no_of_cluster : 2847 (2 - 2848)
+fat_length 9 calculated 9
+heads/cylinder 2 (FAT) != 255 (HD)
+sect/track 18 (FAT) != 63 (HD)
+
+FAT12 at 118869/155/47
+     MS Data               1909640296 1909643175       2880 [EFISECTOR]
+     FAT12, blocksize=512, 1474 KB / 1440 KiB
+FAT12 at 118869/201/29
+FAT1 : 1-9
+FAT2 : 10-18
+start_rootdir : 19
+Data : 33-2879
+sectors : 2880
+cluster_size : 1
+no_of_cluster : 2847 (2 - 2848)
+fat_length 9 calculated 9
+heads/cylinder 2 (FAT) != 255 (HD)
+sect/track 18 (FAT) != 63 (HD)
+
+FAT12 at 118869/201/29
+     MS Data               1909643176 1909646055       2880 [EFISECTOR]
+     FAT12, blocksize=512, 1474 KB / 1440 KiB
+NTFS at 118884/236/41
+heads/cylinder 16 (NTFS) != 255 (HD)
+sect/track 2 (NTFS) != 63 (HD)
+filesystem size           6174
+sectors_per_cluster       1
+mft_lcn                   2058
+mftmirr_lcn               5162
+clusters_per_mft_record   2
+clusters_per_index_record 8
+     MS Data               1909880195 1909886368       6174
+     NTFS found using backup sector, blocksize=512, 3161 KB / 3087 KiB
+NTFS at 118884/236/41
+heads/cylinder 16 (NTFS) != 255 (HD)
+sect/track 2 (NTFS) != 63 (HD)
+filesystem size           6174
+sectors_per_cluster       1
+mft_lcn                   2058
+mftmirr_lcn               5162
+clusters_per_mft_record   2
+clusters_per_index_record 8
+     MS Data               1909886368 1909892541       6174 [Boot]
+     NTFS, blocksize=512, 3161 KB / 3087 KiB
+FAT12 at 118962/179/58
+FAT1 : 1-9
+FAT2 : 10-18
+start_rootdir : 19
+Data : 33-2879
+sectors : 2880
+cluster_size : 1
+no_of_cluster : 2847 (2 - 2848)
+fat_length 9 calculated 9
+heads/cylinder 2 (FAT) != 255 (HD)
+sect/track 18 (FAT) != 63 (HD)
+
+FAT12 at 118962/179/58
+     MS Data               1911135864 1911138743       2880 [EFISECTOR]
+     FAT12, blocksize=512, 1474 KB / 1440 KiB
+NTFS at 119000/73/2
+heads/cylinder 16 (NTFS) != 255 (HD)
+sect/track 2 (NTFS) != 63 (HD)
+filesystem size           6174
+sectors_per_cluster       1
+mft_lcn                   2058
+mftmirr_lcn               5162
+clusters_per_mft_record   2
+clusters_per_index_record 8
+     MS Data               1911733427 1911739600       6174
+     NTFS found using backup sector, blocksize=512, 3161 KB / 3087 KiB
+NTFS at 119000/73/2
+heads/cylinder 16 (NTFS) != 255 (HD)
+sect/track 2 (NTFS) != 63 (HD)
+filesystem size           6174
+sectors_per_cluster       1
+mft_lcn                   2058
+mftmirr_lcn               5162
+clusters_per_mft_record   2
+clusters_per_index_record 8
+     MS Data               1911739600 1911745773       6174 [Boot]
+     NTFS, blocksize=512, 3161 KB / 3087 KiB
+FAT12 at 119001/30/38
+FAT1 : 1-9
+FAT2 : 10-18
+start_rootdir : 19
+Data : 33-2879
+sectors : 2880
+cluster_size : 1
+no_of_cluster : 2847 (2 - 2848)
+fat_length 9 calculated 9
+heads/cylinder 2 (FAT) != 255 (HD)
+sect/track 18 (FAT) != 63 (HD)
+
+FAT12 at 119001/30/38
+     MS Data               1911752992 1911755871       2880 [EFISECTOR]
+     FAT12, blocksize=512, 1474 KB / 1440 KiB
+FAT12 at 119039/158/40
+FAT1 : 1-9
+FAT2 : 10-18
+start_rootdir : 19
+Data : 33-2879
+sectors : 2880
+cluster_size : 1
+no_of_cluster : 2847 (2 - 2848)
+fat_length 9 calculated 9
+heads/cylinder 2 (FAT) != 255 (HD)
+sect/track 18 (FAT) != 63 (HD)
+
+FAT12 at 119039/158/40
+     MS Data               1912371528 1912374407       2880 [EFISECTOR]
+     FAT12, blocksize=512, 1474 KB / 1440 KiB
+FAT12 at 119100/165/42
+FAT1 : 1-9
+FAT2 : 10-18
+start_rootdir : 19
+Data : 33-2879
+sectors : 2880
+cluster_size : 1
+no_of_cluster : 2847 (2 - 2848)
+fat_length 9 calculated 9
+heads/cylinder 2 (FAT) != 255 (HD)
+sect/track 18 (FAT) != 63 (HD)
+
+FAT12 at 119100/165/42
+     MS Data               1913351936 1913354815       2880 [EFISECTOR]
+     FAT12, blocksize=512, 1474 KB / 1440 KiB
+FAT12 at 119682/49/16
+FAT1 : 1-9
+FAT2 : 10-18
+start_rootdir : 19
+Data : 33-2879
+sectors : 2880
+cluster_size : 1
+no_of_cluster : 2847 (2 - 2848)
+fat_length 9 calculated 9
+heads/cylinder 2 (FAT) != 255 (HD)
+sect/track 18 (FAT) != 63 (HD)
+
+FAT12 at 119682/49/16
+     MS Data               1922694432 1922697311       2880 [EFISECTOR]
+     FAT12, blocksize=512, 1474 KB / 1440 KiB
+FAT12 at 120679/96/26
+FAT1 : 1-9
+FAT2 : 10-18
+start_rootdir : 19
+Data : 33-2879
+sectors : 2880
+cluster_size : 1
+no_of_cluster : 2847 (2 - 2848)
+fat_length 9 calculated 9
+heads/cylinder 2 (FAT) != 255 (HD)
+sect/track 18 (FAT) != 63 (HD)
+
+FAT12 at 120679/96/26
+     MS Data               1938714208 1938717087       2880 [EFISECTOR]
+     FAT12, blocksize=512, 1474 KB / 1440 KiB
+NTFS at 120796/64/45
+heads/cylinder 16 (NTFS) != 255 (HD)
+sect/track 2 (NTFS) != 63 (HD)
+filesystem size           6174
+sectors_per_cluster       1
+mft_lcn                   2058
+mftmirr_lcn               5162
+clusters_per_mft_record   2
+clusters_per_index_record 8
+     MS Data               1940585643 1940591816       6174
+     NTFS found using backup sector, blocksize=512, 3161 KB / 3087 KiB
+NTFS at 120796/64/45
+heads/cylinder 16 (NTFS) != 255 (HD)
+sect/track 2 (NTFS) != 63 (HD)
+filesystem size           6174
+sectors_per_cluster       1
+mft_lcn                   2058
+mftmirr_lcn               5162
+clusters_per_mft_record   2
+clusters_per_index_record 8
+     MS Data               1940591816 1940597989       6174 [Boot]
+     NTFS, blocksize=512, 3161 KB / 3087 KiB
+NTFS at 121600/247/55
+filesystem size           46139392
+sectors_per_cluster       8
+mft_lcn                   786432
+mftmirr_lcn               2
+clusters_per_mft_record   -10
+clusters_per_index_record 1
+     MS Data               1907380224 1953519615   46139392
+     NTFS found using backup sector, blocksize=4096, 23 GB / 22 GiB
+NTFS at 121600/247/55
+filesystem size           46139392
+sectors_per_cluster       8
+mft_lcn                   786432
+mftmirr_lcn               2
+clusters_per_mft_record   -10
+clusters_per_index_record 1
+NTFS: Can't read MFT
+     MS Data               1953519615 1999659006   46139392
+     NTFS, blocksize=4096, 23 GB / 22 GiB
+This partition ends after the disk limits. (start=1953519615, size=46139392, end=1999659006, disk end=1953525168)
+NTFS at 121601/57/56
+filesystem size           50358272
+sectors_per_cluster       8
+mft_lcn                   786432
+mftmirr_lcn               2
+clusters_per_mft_record   -10
+clusters_per_index_record 1
+     MS Data               1903165440 1953523711   50358272
+     NTFS found using backup sector, blocksize=4096, 25 GB / 24 GiB
+NTFS at 121601/57/56
+filesystem size           50358272
+sectors_per_cluster       8
+mft_lcn                   786432
+mftmirr_lcn               2
+clusters_per_mft_record   -10
+clusters_per_index_record 1
+NTFS: Can't read MFT
+     MS Data               1953523711 2003881982   50358272
+     NTFS, blocksize=4096, 25 GB / 24 GiB
+This partition ends after the disk limits. (start=1953523711, size=50358272, end=2003881982, disk end=1953525168)
+Disk /dev/sdb - 1000 GB / 931 GiB - CHS 121601 255 63
+Check the harddisk size: HD jumpers settings, BIOS detection...
+The harddisk (1000 GB / 931 GiB) seems too small! (< 1945 GB / 1811 GiB)
+The following partitions can't be recovered:
+     MS Data                895990848 2794303572 1898312725
+     NTFS, blocksize=4096, 971 GB / 905 GiB
+     MS Data                952458912 2850771636 1898312725
+     NTFS, blocksize=4096, 971 GB / 905 GiB
+     MS Data                955466592 2853779316 1898312725
+     NTFS, blocksize=4096, 971 GB / 905 GiB
+     MS Data                956623456 2854936180 1898312725
+     NTFS, blocksize=4096, 971 GB / 905 GiB
+     MS Data                969125856 2867438580 1898312725
+     NTFS, blocksize=4096, 971 GB / 905 GiB
+     MS Data                974786272 2873098996 1898312725
+     NTFS, blocksize=4096, 971 GB / 905 GiB
+     MS Data                978967392 2877280116 1898312725
+     NTFS, blocksize=4096, 971 GB / 905 GiB
+     MS Data                981078976 2879391700 1898312725
+     NTFS, blocksize=4096, 971 GB / 905 GiB
+     MS Data               1129289664 3027602388 1898312725
+     NTFS, blocksize=4096, 971 GB / 905 GiB
+     MS Data               1901409300 3799722024 1898312725
+     NTFS, blocksize=4096, 971 GB / 905 GiB
+     MS Data               1953519615 1999659006   46139392
+     NTFS, blocksize=4096, 23 GB / 22 GiB
+     MS Data               1953523711 2003881982   50358272
+     NTFS, blocksize=4096, 25 GB / 24 GiB
+
+Results
+     MS Data                     2048    2097151    2095104
+     NTFS, blocksize=4096, 1072 MB / 1023 MiB
+     MS Data                   825595     831768       6174
+     NTFS found using backup sector, blocksize=512, 3161 KB / 3087 KiB
+     MS Data                   831768     837941       6174 [Boot]
+     NTFS, blocksize=512, 3161 KB / 3087 KiB
+     MS Data                   869515     875688       6174
+     NTFS found using backup sector, blocksize=512, 3161 KB / 3087 KiB
+     MS Data                   875688     881861       6174 [Boot]
+     NTFS, blocksize=512, 3161 KB / 3087 KiB
+     MS Data                  2097151    4192254    2095104
+     NTFS, blocksize=4096, 1072 MB / 1023 MiB
+     MS Data                  2097152    2834431     737280 [SYSTEM]
+     FAT32, blocksize=4096, 377 MB / 360 MiB
+     MS Data                  2097158    2834437     737280 [NO NAME]
+     FAT32, blocksize=4096, 377 MB / 360 MiB
+     MS Data                  2113608    2850887     737280 [NO NAME]
+     FAT32, blocksize=4096, 377 MB / 360 MiB
+     MS Data                  3096576 1901409300 1898312725
+     NTFS, blocksize=4096, 971 GB / 905 GiB
+     MS Data                120359355  120365528       6174
+     NTFS found using backup sector, blocksize=512, 3161 KB / 3087 KiB
+     MS Data                120365528  120371701       6174 [Boot]
+     NTFS, blocksize=512, 3161 KB / 3087 KiB
+     MS Data                184662272  184665151       2880 [EFISECTOR]
+     FAT12, blocksize=512, 1474 KB / 1440 KiB
+     MS Data                188298752  188301631       2880 [EFISECTOR]
+     FAT12, blocksize=512, 1474 KB / 1440 KiB
+     MS Data                411904784  411907663       2880 [EFISECTOR]
+     FAT12, blocksize=512, 1474 KB / 1440 KiB
+     MS Data                577140304  577143183       2880 [EFISECTOR]
+     FAT12, blocksize=512, 1474 KB / 1440 KiB
+     MS Data                577202224  577205103       2880 [EFISECTOR]
+     FAT12, blocksize=512, 1474 KB / 1440 KiB
+     Mac HFS                747494912  982376193  234881282
+     HFS found using backup sector!, 120 GB / 112 GiB
+     MS Data                897941144  897944023       2880 [EFISECTOR]
+     FAT12, blocksize=512, 1474 KB / 1440 KiB
+     MS Data                897981216  897984095       2880 [EFISECTOR]
+     FAT12, blocksize=512, 1474 KB / 1440 KiB
+     MS Data                898009120  898011999       2880 [EFISECTOR]
+     FAT12, blocksize=512, 1474 KB / 1440 KiB
+     MS Data                903655632  903658511       2880 [EFISECTOR]
+     FAT12, blocksize=512, 1474 KB / 1440 KiB
+     MS Data                934803027  934809200       6174
+     NTFS found using backup sector, blocksize=512, 3161 KB / 3087 KiB
+     MS Data                934809200  934815373       6174 [Boot]
+     NTFS, blocksize=512, 3161 KB / 3087 KiB
+     MS Data                965982035  965988208       6174
+     NTFS found using backup sector, blocksize=512, 3161 KB / 3087 KiB
+     MS Data                965988208  965994381       6174
+     NTFS, blocksize=512, 3161 KB / 3087 KiB
+     MS Data                974806331  974812504       6174
+     NTFS found using backup sector, blocksize=512, 3161 KB / 3087 KiB
+     MS Data                974812504  974818677       6174
+     NTFS, blocksize=512, 3161 KB / 3087 KiB
+     MS Data                976808544  976811423       2880 [EFISECTOR]
+     FAT12, blocksize=512, 1474 KB / 1440 KiB
+     MS Data                979048891  979055064       6174
+     NTFS found using backup sector, blocksize=512, 3161 KB / 3087 KiB
+     MS Data                979055064  979061237       6174
+     NTFS, blocksize=512, 3161 KB / 3087 KiB
+     MS Data                979689139  979695312       6174
+     NTFS found using backup sector, blocksize=512, 3161 KB / 3087 KiB
+     MS Data                979695312  979701485       6174
+     NTFS, blocksize=512, 3161 KB / 3087 KiB
+     MS Data                980724083  980730256       6174
+     NTFS found using backup sector, blocksize=512, 3161 KB / 3087 KiB
+     MS Data                980730256  980736429       6174
+     NTFS, blocksize=512, 3161 KB / 3087 KiB
+     MS Data                982138368  982141247       2880 [EFISECTOR]
+     FAT12, blocksize=512, 1474 KB / 1440 KiB
+     MS Data                982348256  982351135       2880 [EFISECTOR]
+     FAT12, blocksize=512, 1474 KB / 1440 KiB
+     Mac HFS                982376190 1217257471  234881282
+     HFS blocksize=33554432, 120 GB / 112 GiB
+     MS Data                982725619  982731792       6174
+     NTFS found using backup sector, blocksize=512, 3161 KB / 3087 KiB
+     MS Data                982731792  982737965       6174
+     NTFS, blocksize=512, 3161 KB / 3087 KiB
+     MS Data                982954688  982957567       2880 [EFISECTOR]
+     FAT12, blocksize=512, 1474 KB / 1440 KiB
+     MS Data                984683648  984686527       2880 [EFISECTOR]
+     FAT12, blocksize=512, 1474 KB / 1440 KiB
+     MS Data                984923931  984930104       6174
+     NTFS found using backup sector, blocksize=512, 3161 KB / 3087 KiB
+     MS Data                984930104  984936277       6174
+     NTFS, blocksize=512, 3161 KB / 3087 KiB
+     MS Data                985511667  985517840       6174
+     NTFS found using backup sector, blocksize=512, 3161 KB / 3087 KiB
+     MS Data                985517840  985524013       6174
+     NTFS, blocksize=512, 3161 KB / 3087 KiB
+     MS Data                986630035  986636208       6174
+     NTFS found using backup sector, blocksize=512, 3161 KB / 3087 KiB
+     MS Data                986636208  986642381       6174
+     NTFS, blocksize=512, 3161 KB / 3087 KiB
+     MS Data                987364176  987367055       2880 [EFISECTOR]
+     FAT12, blocksize=512, 1474 KB / 1440 KiB
+     MS Data               1119174688 1119177567       2880 [EFISECTOR]
+     FAT12, blocksize=512, 1474 KB / 1440 KiB
+     MS Data               1125350587 1125356760       6174
+     NTFS found using backup sector, blocksize=512, 3161 KB / 3087 KiB
+     MS Data               1125356760 1125362933       6174
+     NTFS, blocksize=512, 3161 KB / 3087 KiB
+     MS Data               1125396923 1125403096       6174
+     NTFS found using backup sector, blocksize=512, 3161 KB / 3087 KiB
+     MS Data               1125403096 1125409269       6174
+     NTFS, blocksize=512, 3161 KB / 3087 KiB
+     MS Data               1127377840 1127380719       2880 [EFISECTOR]
+     FAT12, blocksize=512, 1474 KB / 1440 KiB
+     MS Data               1128958723 1128964896       6174
+     NTFS found using backup sector, blocksize=512, 3161 KB / 3087 KiB
+     MS Data               1128964896 1128971069       6174
+     NTFS, blocksize=512, 3161 KB / 3087 KiB
+     MS Data               1852807169 1903165440   50358272
+     NTFS found using backup sector, blocksize=4096, 25 GB / 24 GiB
+     MS Data               1899655169 1901410304    1755136
+     NTFS found using backup sector, blocksize=4096, 898 MB / 857 MiB
+     MS Data               1901410304 1903165439    1755136
+     NTFS, blocksize=4096, 898 MB / 857 MiB
+     MS Data               1901526721 1903281856    1755136
+     NTFS found using backup sector, blocksize=4096, 898 MB / 857 MiB
+     MS Data               1902147579 1902153752       6174
+     NTFS found using backup sector, blocksize=512, 3161 KB / 3087 KiB
+     MS Data               1902153752 1902159925       6174 [Boot]
+     NTFS, blocksize=512, 3161 KB / 3087 KiB
+     MS Data               1903165439 1904920574    1755136
+     NTFS, blocksize=4096, 898 MB / 857 MiB
+     MS Data               1903165440 1953523711   50358272
+     NTFS, blocksize=4096, 25 GB / 24 GiB
+     MS Data               1903281856 1905036991    1755136
+     NTFS, blocksize=4096, 898 MB / 857 MiB
+     MS Data               1907380224 1953519615   46139392
+     NTFS found using backup sector, blocksize=4096, 23 GB / 22 GiB
+     MS Data               1909560459 1909566632       6174
+     NTFS found using backup sector, blocksize=512, 3161 KB / 3087 KiB
+     MS Data               1909566632 1909572805       6174 [Boot]
+     NTFS, blocksize=512, 3161 KB / 3087 KiB
+     MS Data               1909583131 1909589304       6174
+     NTFS found using backup sector, blocksize=512, 3161 KB / 3087 KiB
+     MS Data               1909589304 1909595477       6174 [Boot]
+     NTFS, blocksize=512, 3161 KB / 3087 KiB
+     MS Data               1909634536 1909637415       2880 [EFISECTOR]
+     FAT12, blocksize=512, 1474 KB / 1440 KiB
+     MS Data               1909637416 1909640295       2880 [EFISECTOR]
+     FAT12, blocksize=512, 1474 KB / 1440 KiB
+     MS Data               1909640296 1909643175       2880 [EFISECTOR]
+     FAT12, blocksize=512, 1474 KB / 1440 KiB
+     MS Data               1909643176 1909646055       2880 [EFISECTOR]
+     FAT12, blocksize=512, 1474 KB / 1440 KiB
+     MS Data               1909880195 1909886368       6174
+     NTFS found using backup sector, blocksize=512, 3161 KB / 3087 KiB
+     MS Data               1909886368 1909892541       6174 [Boot]
+     NTFS, blocksize=512, 3161 KB / 3087 KiB
+     MS Data               1911135864 1911138743       2880 [EFISECTOR]
+     FAT12, blocksize=512, 1474 KB / 1440 KiB
+     MS Data               1911733427 1911739600       6174
+     NTFS found using backup sector, blocksize=512, 3161 KB / 3087 KiB
+     MS Data               1911739600 1911745773       6174 [Boot]
+     NTFS, blocksize=512, 3161 KB / 3087 KiB
+     MS Data               1911752992 1911755871       2880 [EFISECTOR]
+     FAT12, blocksize=512, 1474 KB / 1440 KiB
+     MS Data               1912371528 1912374407       2880 [EFISECTOR]
+     FAT12, blocksize=512, 1474 KB / 1440 KiB
+     MS Data               1913351936 1913354815       2880 [EFISECTOR]
+     FAT12, blocksize=512, 1474 KB / 1440 KiB
+     MS Data               1922694432 1922697311       2880 [EFISECTOR]
+     FAT12, blocksize=512, 1474 KB / 1440 KiB
+     MS Data               1938714208 1938717087       2880 [EFISECTOR]
+     FAT12, blocksize=512, 1474 KB / 1440 KiB
+     MS Data               1940585643 1940591816       6174
+     NTFS found using backup sector, blocksize=512, 3161 KB / 3087 KiB
+     MS Data               1940591816 1940597989       6174 [Boot]
+     NTFS, blocksize=512, 3161 KB / 3087 KiB
+
+Hint for advanced users. dmsetup may be used if you prefer to avoid to rewrite the partition table for the moment:
+echo "0 2095104 linear /dev/sdb 2048" | dmsetup create test0
+echo "0 6174 linear /dev/sdb 825595" | dmsetup create test1
+echo "0 6174 linear /dev/sdb 831768" | dmsetup create test2
+echo "0 6174 linear /dev/sdb 869515" | dmsetup create test3
+echo "0 6174 linear /dev/sdb 875688" | dmsetup create test4
+echo "0 2095104 linear /dev/sdb 2097151" | dmsetup create test5
+echo "0 737280 linear /dev/sdb 2097152" | dmsetup create test6
+echo "0 737280 linear /dev/sdb 2097158" | dmsetup create test7
+echo "0 737280 linear /dev/sdb 2113608" | dmsetup create test8
+echo "0 1898312725 linear /dev/sdb 3096576" | dmsetup create test9
+echo "0 6174 linear /dev/sdb 120359355" | dmsetup create test10
+echo "0 6174 linear /dev/sdb 120365528" | dmsetup create test11
+echo "0 2880 linear /dev/sdb 184662272" | dmsetup create test12
+echo "0 2880 linear /dev/sdb 188298752" | dmsetup create test13
+echo "0 2880 linear /dev/sdb 411904784" | dmsetup create test14
+echo "0 2880 linear /dev/sdb 577140304" | dmsetup create test15
+echo "0 2880 linear /dev/sdb 577202224" | dmsetup create test16
+echo "0 234881282 linear /dev/sdb 747494912" | dmsetup create test17
+echo "0 2880 linear /dev/sdb 897941144" | dmsetup create test18
+echo "0 2880 linear /dev/sdb 897981216" | dmsetup create test19
+echo "0 2880 linear /dev/sdb 898009120" | dmsetup create test20
+echo "0 2880 linear /dev/sdb 903655632" | dmsetup create test21
+echo "0 6174 linear /dev/sdb 934803027" | dmsetup create test22
+echo "0 6174 linear /dev/sdb 934809200" | dmsetup create test23
+echo "0 6174 linear /dev/sdb 965982035" | dmsetup create test24
+echo "0 6174 linear /dev/sdb 965988208" | dmsetup create test25
+echo "0 6174 linear /dev/sdb 974806331" | dmsetup create test26
+echo "0 6174 linear /dev/sdb 974812504" | dmsetup create test27
+echo "0 2880 linear /dev/sdb 976808544" | dmsetup create test28
+echo "0 6174 linear /dev/sdb 979048891" | dmsetup create test29
+echo "0 6174 linear /dev/sdb 979055064" | dmsetup create test30
+echo "0 6174 linear /dev/sdb 979689139" | dmsetup create test31
+echo "0 6174 linear /dev/sdb 979695312" | dmsetup create test32
+echo "0 6174 linear /dev/sdb 980724083" | dmsetup create test33
+echo "0 6174 linear /dev/sdb 980730256" | dmsetup create test34
+echo "0 2880 linear /dev/sdb 982138368" | dmsetup create test35
+echo "0 2880 linear /dev/sdb 982348256" | dmsetup create test36
+echo "0 234881282 linear /dev/sdb 982376190" | dmsetup create test37
+echo "0 6174 linear /dev/sdb 982725619" | dmsetup create test38
+echo "0 6174 linear /dev/sdb 982731792" | dmsetup create test39
+echo "0 2880 linear /dev/sdb 982954688" | dmsetup create test40
+echo "0 2880 linear /dev/sdb 984683648" | dmsetup create test41
+echo "0 6174 linear /dev/sdb 984923931" | dmsetup create test42
+echo "0 6174 linear /dev/sdb 984930104" | dmsetup create test43
+echo "0 6174 linear /dev/sdb 985511667" | dmsetup create test44
+echo "0 6174 linear /dev/sdb 985517840" | dmsetup create test45
+echo "0 6174 linear /dev/sdb 986630035" | dmsetup create test46
+echo "0 6174 linear /dev/sdb 986636208" | dmsetup create test47
+echo "0 2880 linear /dev/sdb 987364176" | dmsetup create test48
+echo "0 2880 linear /dev/sdb 1119174688" | dmsetup create test49
+echo "0 6174 linear /dev/sdb 1125350587" | dmsetup create test50
+echo "0 6174 linear /dev/sdb 1125356760" | dmsetup create test51
+echo "0 6174 linear /dev/sdb 1125396923" | dmsetup create test52
+echo "0 6174 linear /dev/sdb 1125403096" | dmsetup create test53
+echo "0 2880 linear /dev/sdb 1127377840" | dmsetup create test54
+echo "0 6174 linear /dev/sdb 1128958723" | dmsetup create test55
+echo "0 6174 linear /dev/sdb 1128964896" | dmsetup create test56
+echo "0 50358272 linear /dev/sdb 1852807169" | dmsetup create test57
+echo "0 1755136 linear /dev/sdb 1899655169" | dmsetup create test58
+echo "0 1755136 linear /dev/sdb 1901410304" | dmsetup create test59
+echo "0 1755136 linear /dev/sdb 1901526721" | dmsetup create test60
+echo "0 6174 linear /dev/sdb 1902147579" | dmsetup create test61
+echo "0 6174 linear /dev/sdb 1902153752" | dmsetup create test62
+echo "0 1755136 linear /dev/sdb 1903165439" | dmsetup create test63
+echo "0 50358272 linear /dev/sdb 1903165440" | dmsetup create test64
+echo "0 1755136 linear /dev/sdb 1903281856" | dmsetup create test65
+echo "0 46139392 linear /dev/sdb 1907380224" | dmsetup create test66
+echo "0 6174 linear /dev/sdb 1909560459" | dmsetup create test67
+echo "0 6174 linear /dev/sdb 1909566632" | dmsetup create test68
+echo "0 6174 linear /dev/sdb 1909583131" | dmsetup create test69
+echo "0 6174 linear /dev/sdb 1909589304" | dmsetup create test70
+echo "0 2880 linear /dev/sdb 1909634536" | dmsetup create test71
+echo "0 2880 linear /dev/sdb 1909637416" | dmsetup create test72
+echo "0 2880 linear /dev/sdb 1909640296" | dmsetup create test73
+echo "0 2880 linear /dev/sdb 1909643176" | dmsetup create test74
+echo "0 6174 linear /dev/sdb 1909880195" | dmsetup create test75
+echo "0 6174 linear /dev/sdb 1909886368" | dmsetup create test76
+echo "0 2880 linear /dev/sdb 1911135864" | dmsetup create test77
+echo "0 6174 linear /dev/sdb 1911733427" | dmsetup create test78
+echo "0 6174 linear /dev/sdb 1911739600" | dmsetup create test79
+echo "0 2880 linear /dev/sdb 1911752992" | dmsetup create test80
+echo "0 2880 linear /dev/sdb 1912371528" | dmsetup create test81
+echo "0 2880 linear /dev/sdb 1913351936" | dmsetup create test82
+echo "0 2880 linear /dev/sdb 1922694432" | dmsetup create test83
+echo "0 2880 linear /dev/sdb 1938714208" | dmsetup create test84
+echo "0 6174 linear /dev/sdb 1940585643" | dmsetup create test85
+echo "0 6174 linear /dev/sdb 1940591816" | dmsetup create test86
+
+interface_write()
+ 
+No partition found or selected for recovery
+ntfs_mst_post_read_fixup_warn: magic: 0x00000000  size: 1024   usa_ofs: 0  usa_count: 0: Argomento non valido
+Record 10 has no FILE magic (0x0)
+Failed to open inode FILE_UpCase: Errore di input/output
+simulate write!
+
+Interface Advanced
+hdr_size=92
+hdr_lba_self=1
+hdr_lba_alt=1953525167 (expected 1953525167)
+hdr_lba_start=34
+hdr_lba_end=1953525134
+hdr_lba_table=2
+hdr_entries=128
+hdr_entsz=128
+check_part_gpt failed for partition
+ 3 P MS Reserved              2834432    3096575     262144 [Microsoft reserved partition]
+ 1 P Unknown                     2048    2097151    2095104 [Basic data partition]
+ 2 P EFI System               2097152    2834431     737280 [EFI system partition]
+ 3 P MS Reserved              2834432    3096575     262144 [Microsoft reserved partition]
+ 4 P MS Data                  3096576 1901409300 1898312725 [Basic data partition]
+     NTFS, blocksize=4096, 971 GB / 905 GiB
+ 5 P Unknown               1901410304 1903165439    1755136
+ 6 P MS Data               1903165440 1953523711   50358272 [Basic data partition]
+     NTFS, blocksize=4096, 25 GB / 24 GiB
+ntfs_device_testdisk_io_ioctl() unimplemented
+ntfs_device_testdisk_io_ioctl() unimplemented
+NTFS filesystem need to be repaired.
+
+
+dir_partition inode=5
+ 4 P MS Data                  3096576 1901409300 1898312725 [Basic data partition]
+     NTFS, blocksize=4096, 971 GB / 905 GiB
+Directory /
+       5 dr-xr-xr-x     0      0         0 16-Apr-2020 17:48 .
+       5 dr-xr-xr-x     0      0         0 16-Apr-2020 17:48 ..
+    8542 dr-xr-xr-x     0      0         0 27-Mar-2020 16:02 $RECYCLE.BIN
+   11599 dr-xr-xr-x     0      0         0 16-Apr-2020 18:18 PC FISSO PAPA'
+      36 dr-xr-xr-x     0      0         0 27-Mar-2020 15:20 System Volume Information
+      39 dr-xr-xr-x     0      0         0 27-Mar-2020 16:22 thyssenkrupp2020
+
+dir_partition inode=39
+ 4 P MS Data                  3096576 1901409300 1898312725 [Basic data partition]
+     NTFS, blocksize=4096, 971 GB / 905 GiB
+Directory /thyssenkrupp2020
+      39 dr-xr-xr-x     0      0         0 27-Mar-2020 16:22 .
+       5 dr-xr-xr-x     0      0         0 16-Apr-2020 17:48 ..
+     630 dr-xr-xr-x     0      0         0 27-Mar-2020 15:31 2 C
+    1763 dr-xr-xr-x     0      0         0 27-Mar-2020 15:31 3-FORNITORE
+    1934 dr-xr-xr-x     0      0         0 27-Mar-2020 15:31 Android
+    2081 dr-xr-xr-x     0      0         0 27-Mar-2020 15:31 Ariatta 18029 - palazzo uffici (Torino)
+    8767 dr-xr-xr-x     0      0         0 27-Mar-2020 16:19 COMM
+    2178 dr-xr-xr-x     0      0         0 27-Mar-2020 15:31 DEF20012017
+    2262 dr-xr-xr-x     0      0         0 27-Mar-2020 15:31 DEROGA
+    8906 dr-xr-xr-x     0      0         0 27-Mar-2020 16:26 Dati copia Bagnoli
+    2271 dr-xr-xr-x     0      0         0 27-Mar-2020 15:31 Disegni Definitivi
+    2414 dr-xr-xr-x     0      0         0 27-Mar-2020 15:31 Gite 1C
+    3755 dr-xr-xr-x     0      0         0 27-Mar-2020 16:07 HP CASA
+    2738 dr-xr-xr-x     0      0         0 27-Mar-2020 15:31 Headway
+    7379 dr-xr-xr-x     0      0         0 27-Mar-2020 15:33 Magni - Ariatta via Garofalo progetto 18041 (Milano)
+    5113 dr-xr-xr-x     0      0         0 27-Mar-2020 15:33 Magni - analisi dinamico vs evolution
+    8730 dr-xr-xr-x     0      0         0 27-Mar-2020 16:05 Nuova cartella
+    8701 dr-xr-xr-x     0      0         0 27-Mar-2020 15:52 Posta elettronica
+    8704 dr-xr-xr-x     0      0         0 27-Mar-2020 15:56 Progetti definitivi
+    8545 dr-xr-xr-x     0      0         0 27-Mar-2020 16:16 Progetti in corso
+    7834 dr-xr-xr-x     0      0         0  2-Apr-2018 12:27 Samsung Antonella
+    7835 dr-xr-xr-x     0      0         0 27-Mar-2020 15:34 Samsung aziendale
+    8532 dr-xr-xr-x     0      0         0 27-Mar-2020 15:34 Situazione costi DINAMICI
+    2138 dr-xr-xr-x     0      0         0 27-Mar-2020 15:31 cartella senza titolo
+    2172 dr-xr-xr-x     0      0         0 27-Mar-2020 15:31 curriculum
+      40 -r--r--r--     0      0    324754  8-Jun-2017 08:21 11_2_2_travi_appoggiate.pdf
+      41 -r--r--r--     0      0    136650  8-Jun-2017 08:21 1459323021463_trasparenza_amministrativa_tasso_presenza-assenza_2013.zip
+    8763 -r--r--r--     0      0    500371 20-Feb-2020 12:47 1849H0.pdf
+    8763 -r--r--r--     0      0        26 20-Feb-2020 12:47 1849H0.pdf:Zone.Identifier
+      42 -r--r--r--     0      0   4149562 22-May-2018 20:49 1C GITA CON INSEGNANTI.jpg
+      43 -r--r--r--     0      0   4213730 22-May-2018 19:15 1C gita.jpg
+      44 -r--r--r--     0      0    585613  8-Jun-2017 08:21 47177_RT05 - Relazione di calcolo vano ascensore Giusti.pdf
+    3814 -r--r--r--     0      0    744339 20-Feb-2020 12:44 6035H20.pdf
+    3814 -r--r--r--     0      0        26 20-Feb-2020 12:44 6035H20.pdf:Zone.Identifier
+      47 -r--r--r--     0      0    482304 22-Nov-2019 14:44 Ariatta - Hotel (Roma) - riepilogo dati tecnici e costi rev03.xls
+    3815 -r--r--r--     0      0     84887 20-Feb-2020 16:29 Ariatta 19003 - Ascensore A1 scheda cabina.pdf
+    3815 -r--r--r--     0      0        26 20-Feb-2020 16:29 Ariatta 19003 - Ascensore A1 scheda cabina.pdf:Zone.Identifier
+    3891 -r--r--r--     0      0    101335 20-Feb-2020 16:06 Ariatta 19003 - Ascensore A1.pdf
+    3891 -r--r--r--     0      0        26 20-Feb-2020 16:06 Ariatta 19003 - Ascensore A1.pdf:Zone.Identifier
+    3895 -r--r--r--     0      0     92238 18-Feb-2020 10:01 Ariatta 19057 - scheda dati impianto.pdf
+    3895 -r--r--r--     0      0        26 18-Feb-2020 10:01 Ariatta 19057 - scheda dati impianto.pdf:Zone.Identifier
+      48 -r--r--r--     0      0     17766 11-Sep-2019 21:13 BERNERI LEONARDO - numeri utili.docx
+      49 -r--r--r--     0      0     17600 10-Sep-2018 14:06 BERNERI NICOLO' - numeri utili.docx
+    3892 -r--r--r--     0      0   1640953 12-Feb-2020 18:11 CONF 1 -  MRL 320÷1600-REV 9.xlsx
+      50 -r--r--r--     0      0   2956996 27-Aug-2018 13:19 DSC_0419.JPG
+      51 -r--r--r--     0      0   3273895 27-Aug-2018 13:19 DSC_0420.JPG
+      52 -r--r--r--     0      0   3454693 27-Aug-2018 13:19 DSC_0421.JPG
+      53 -r--r--r--     0      0   3503964 27-Aug-2018 13:19 DSC_0422.JPG
+      54 -r--r--r--     0      0   1386853  6-Dec-2017 16:55 Elaborato Grammegna vano scala.dwg
+      56 -r--r--r--     0      0    288780 23-Jan-2020 15:04 Gestione_UT_Versione_20190930.xlsm
+      57 -r--r--r--     0      0     71298 28-Sep-2017 18:17 M2010681706385 Rev.1 Relazione Tecnica.docx
+      58 -r--r--r--     0      0     71046 17-Nov-2017 08:35 M2010681706385-1 Relazione Tecnica.doc
+    8765 -r--r--r--     0      0   4464905 20-Feb-2020 12:34 MAM_Synergy_SMP_GEN1_R2-R3_EN81-20.pdf
+    8765 -r--r--r--     0      0        26 20-Feb-2020 12:34 MAM_Synergy_SMP_GEN1_R2-R3_EN81-20.pdf:Zone.Identifier
+    8711 -r--r--r--     0      0    105789 19-Feb-2020 17:13 MC1.pdf
+    8711 -r--r--r--     0      0        26 19-Feb-2020 17:13 MC1.pdf:Zone.Identifier
+      59 -r--r--r--     0      0   7375146  6-Dec-2017 14:25 Mercati Generali Roma - schede tecniche impianti.zip
+    8764 -r--r--r--     0      0   3567975 28-Jan-2020 15:05 O-IT-2020-013940_4_412377_P.dwg
+    3893 -r--r--r--     0      0    111904 28-Jan-2020 14:41 Quotation-950445-O-IT-2020-013940-4-812642552.pdf
+    3893 -r--r--r--     0      0        26 28-Jan-2020 14:41 Quotation-950445-O-IT-2020-013940-4-812642552.pdf:Zone.Identifier
+      60 -r--r--r--     0      0     98304  8-Jun-2017 08:21 Travi_IPE_HEA_e_HEB.xls
+    8710 -r--r--r--     0      0    114305 17-Feb-2020 11:49 Zumaglini & Gallina via Alfieri, 22 (Torino) - ascensore scala A.pdf
+    8710 -r--r--r--     0      0        26 17-Feb-2020 11:49 Zumaglini & Gallina via Alfieri, 22 (Torino) - ascensore scala A.pdf:Zone.Identifier
+      45 -r--r--r--     0      0   2144533  8-Jun-2017 08:21 a7_misura_angoli_e_distanze.pdf
+    8766 -r--r--r--     0      0    485852 12-Feb-2020 06:19 barbieri via alfieri.ld3
+      55 -r--r--r--     0      0     65641  8-Jun-2017 08:21 esami sangue.pdf
+    8712 -r--r--r--     0      0    115906 26-Mar-2020 12:39 syn100 450kg 4F, 1A.pdf
+    8712 -r--r--r--     0      0        26 26-Mar-2020 12:39 syn100 450kg 4F, 1A.pdf:Zone.Identifier
+    3894 -r--r--r--     0      0   2589991 18-Feb-2020 09:33 synergy100-elevator-brochure-2020_it_REV1.pdf
+Directory /
+       5 dr-xr-xr-x     0      0         0 16-Apr-2020 17:48 .
+       5 dr-xr-xr-x     0      0         0 16-Apr-2020 17:48 ..
+    8542 dr-xr-xr-x     0      0         0 27-Mar-2020 16:02 $RECYCLE.BIN
+   11599 dr-xr-xr-x     0      0         0 16-Apr-2020 18:18 PC FISSO PAPA'
+      36 dr-xr-xr-x     0      0         0 27-Mar-2020 15:20 System Volume Information
+      39 dr-xr-xr-x     0      0         0 27-Mar-2020 16:22 thyssenkrupp2020
+
+dir_partition inode=39
+ 4 P MS Data                  3096576 1901409300 1898312725 [Basic data partition]
+     NTFS, blocksize=4096, 971 GB / 905 GiB
+Directory /thyssenkrupp2020
+      39 dr-xr-xr-x     0      0         0 27-Mar-2020 16:22 .
+       5 dr-xr-xr-x     0      0         0 16-Apr-2020 17:48 ..
+     630 dr-xr-xr-x     0      0         0 27-Mar-2020 15:31 2 C
+    1763 dr-xr-xr-x     0      0         0 27-Mar-2020 15:31 3-FORNITORE
+    1934 dr-xr-xr-x     0      0         0 27-Mar-2020 15:31 Android
+    2081 dr-xr-xr-x     0      0         0 27-Mar-2020 15:31 Ariatta 18029 - palazzo uffici (Torino)
+    8767 dr-xr-xr-x     0      0         0 27-Mar-2020 16:19 COMM
+    2178 dr-xr-xr-x     0      0         0 27-Mar-2020 15:31 DEF20012017
+    2262 dr-xr-xr-x     0      0         0 27-Mar-2020 15:31 DEROGA
+    8906 dr-xr-xr-x     0      0         0 27-Mar-2020 16:26 Dati copia Bagnoli
+    2271 dr-xr-xr-x     0      0         0 27-Mar-2020 15:31 Disegni Definitivi
+    2414 dr-xr-xr-x     0      0         0 27-Mar-2020 15:31 Gite 1C
+    3755 dr-xr-xr-x     0      0         0 27-Mar-2020 16:07 HP CASA
+    2738 dr-xr-xr-x     0      0         0 27-Mar-2020 15:31 Headway
+    7379 dr-xr-xr-x     0      0         0 27-Mar-2020 15:33 Magni - Ariatta via Garofalo progetto 18041 (Milano)
+    5113 dr-xr-xr-x     0      0         0 27-Mar-2020 15:33 Magni - analisi dinamico vs evolution
+    8730 dr-xr-xr-x     0      0         0 27-Mar-2020 16:05 Nuova cartella
+    8701 dr-xr-xr-x     0      0         0 27-Mar-2020 15:52 Posta elettronica
+    8704 dr-xr-xr-x     0      0         0 27-Mar-2020 15:56 Progetti definitivi
+    8545 dr-xr-xr-x     0      0         0 27-Mar-2020 16:16 Progetti in corso
+    7834 dr-xr-xr-x     0      0         0  2-Apr-2018 12:27 Samsung Antonella
+    7835 dr-xr-xr-x     0      0         0 27-Mar-2020 15:34 Samsung aziendale
+    8532 dr-xr-xr-x     0      0         0 27-Mar-2020 15:34 Situazione costi DINAMICI
+    2138 dr-xr-xr-x     0      0         0 27-Mar-2020 15:31 cartella senza titolo
+    2172 dr-xr-xr-x     0      0         0 27-Mar-2020 15:31 curriculum
+      40 -r--r--r--     0      0    324754  8-Jun-2017 08:21 11_2_2_travi_appoggiate.pdf
+      41 -r--r--r--     0      0    136650  8-Jun-2017 08:21 1459323021463_trasparenza_amministrativa_tasso_presenza-assenza_2013.zip
+    8763 -r--r--r--     0      0    500371 20-Feb-2020 12:47 1849H0.pdf
+    8763 -r--r--r--     0      0        26 20-Feb-2020 12:47 1849H0.pdf:Zone.Identifier
+      42 -r--r--r--     0      0   4149562 22-May-2018 20:49 1C GITA CON INSEGNANTI.jpg
+      43 -r--r--r--     0      0   4213730 22-May-2018 19:15 1C gita.jpg
+      44 -r--r--r--     0      0    585613  8-Jun-2017 08:21 47177_RT05 - Relazione di calcolo vano ascensore Giusti.pdf
+    3814 -r--r--r--     0      0    744339 20-Feb-2020 12:44 6035H20.pdf
+    3814 -r--r--r--     0      0        26 20-Feb-2020 12:44 6035H20.pdf:Zone.Identifier
+      47 -r--r--r--     0      0    482304 22-Nov-2019 14:44 Ariatta - Hotel (Roma) - riepilogo dati tecnici e costi rev03.xls
+    3815 -r--r--r--     0      0     84887 20-Feb-2020 16:29 Ariatta 19003 - Ascensore A1 scheda cabina.pdf
+    3815 -r--r--r--     0      0        26 20-Feb-2020 16:29 Ariatta 19003 - Ascensore A1 scheda cabina.pdf:Zone.Identifier
+    3891 -r--r--r--     0      0    101335 20-Feb-2020 16:06 Ariatta 19003 - Ascensore A1.pdf
+    3891 -r--r--r--     0      0        26 20-Feb-2020 16:06 Ariatta 19003 - Ascensore A1.pdf:Zone.Identifier
+    3895 -r--r--r--     0      0     92238 18-Feb-2020 10:01 Ariatta 19057 - scheda dati impianto.pdf
+    3895 -r--r--r--     0      0        26 18-Feb-2020 10:01 Ariatta 19057 - scheda dati impianto.pdf:Zone.Identifier
+      48 -r--r--r--     0      0     17766 11-Sep-2019 21:13 BERNERI LEONARDO - numeri utili.docx
+      49 -r--r--r--     0      0     17600 10-Sep-2018 14:06 BERNERI NICOLO' - numeri utili.docx
+    3892 -r--r--r--     0      0   1640953 12-Feb-2020 18:11 CONF 1 -  MRL 320÷1600-REV 9.xlsx
+      50 -r--r--r--     0      0   2956996 27-Aug-2018 13:19 DSC_0419.JPG
+      51 -r--r--r--     0      0   3273895 27-Aug-2018 13:19 DSC_0420.JPG
+      52 -r--r--r--     0      0   3454693 27-Aug-2018 13:19 DSC_0421.JPG
+      53 -r--r--r--     0      0   3503964 27-Aug-2018 13:19 DSC_0422.JPG
+      54 -r--r--r--     0      0   1386853  6-Dec-2017 16:55 Elaborato Grammegna vano scala.dwg
+      56 -r--r--r--     0      0    288780 23-Jan-2020 15:04 Gestione_UT_Versione_20190930.xlsm
+      57 -r--r--r--     0      0     71298 28-Sep-2017 18:17 M2010681706385 Rev.1 Relazione Tecnica.docx
+      58 -r--r--r--     0      0     71046 17-Nov-2017 08:35 M2010681706385-1 Relazione Tecnica.doc
+    8765 -r--r--r--     0      0   4464905 20-Feb-2020 12:34 MAM_Synergy_SMP_GEN1_R2-R3_EN81-20.pdf
+    8765 -r--r--r--     0      0        26 20-Feb-2020 12:34 MAM_Synergy_SMP_GEN1_R2-R3_EN81-20.pdf:Zone.Identifier
+    8711 -r--r--r--     0      0    105789 19-Feb-2020 17:13 MC1.pdf
+    8711 -r--r--r--     0      0        26 19-Feb-2020 17:13 MC1.pdf:Zone.Identifier
+      59 -r--r--r--     0      0   7375146  6-Dec-2017 14:25 Mercati Generali Roma - schede tecniche impianti.zip
+    8764 -r--r--r--     0      0   3567975 28-Jan-2020 15:05 O-IT-2020-013940_4_412377_P.dwg
+    3893 -r--r--r--     0      0    111904 28-Jan-2020 14:41 Quotation-950445-O-IT-2020-013940-4-812642552.pdf
+    3893 -r--r--r--     0      0        26 28-Jan-2020 14:41 Quotation-950445-O-IT-2020-013940-4-812642552.pdf:Zone.Identifier
+      60 -r--r--r--     0      0     98304  8-Jun-2017 08:21 Travi_IPE_HEA_e_HEB.xls
+    8710 -r--r--r--     0      0    114305 17-Feb-2020 11:49 Zumaglini & Gallina via Alfieri, 22 (Torino) - ascensore scala A.pdf
+    8710 -r--r--r--     0      0        26 17-Feb-2020 11:49 Zumaglini & Gallina via Alfieri, 22 (Torino) - ascensore scala A.pdf:Zone.Identifier
+      45 -r--r--r--     0      0   2144533  8-Jun-2017 08:21 a7_misura_angoli_e_distanze.pdf
+    8766 -r--r--r--     0      0    485852 12-Feb-2020 06:19 barbieri via alfieri.ld3
+      55 -r--r--r--     0      0     65641  8-Jun-2017 08:21 esami sangue.pdf
+    8712 -r--r--r--     0      0    115906 26-Mar-2020 12:39 syn100 450kg 4F, 1A.pdf
+    8712 -r--r--r--     0      0        26 26-Mar-2020 12:39 syn100 450kg 4F, 1A.pdf:Zone.Identifier
+    3894 -r--r--r--     0      0   2589991 18-Feb-2020 09:33 synergy100-elevator-brochure-2020_it_REV1.pdf
+Directory /
+       5 dr-xr-xr-x     0      0         0 16-Apr-2020 17:48 .
+       5 dr-xr-xr-x     0      0         0 16-Apr-2020 17:48 ..
+    8542 dr-xr-xr-x     0      0         0 27-Mar-2020 16:02 $RECYCLE.BIN
+   11599 dr-xr-xr-x     0      0         0 16-Apr-2020 18:18 PC FISSO PAPA'
+      36 dr-xr-xr-x     0      0         0 27-Mar-2020 15:20 System Volume Information
+      39 dr-xr-xr-x     0      0         0 27-Mar-2020 16:22 thyssenkrupp2020
+SIGINT detected! TestDisk has been killed.
