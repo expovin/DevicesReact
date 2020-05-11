@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Device from './Device/device'
-
+import {Row} from 'react-bootstrap';
 
 
 
@@ -24,7 +24,7 @@ class Devices extends Component {
         
 
         return(
-                <div className="row">{devices}</div>
+                <Row>{devices}</Row>
             )
     }
 

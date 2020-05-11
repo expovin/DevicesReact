@@ -14,7 +14,6 @@ class NewConnectionModal extends Component {
 
     handleChangeDevice = (event) => {
 
-        console.log("handleChangeDevice : "+event.target.value)
         this.setState({device_id : event.target.value})
         const Iface = this.props.availableDevices
         .filter( (device) => {
@@ -23,12 +22,10 @@ class NewConnectionModal extends Component {
         })
         .map( (device,idx) =>  <option key={idx} value={device.Interface_id}>{device.Interface_id}</option>)     
 
-        console.log(Iface)
         this.setState({Iface : Iface})
     }    
 
     handlerChanceIface = (event) => {
-        console.log("iFace --> "+event.target.value);
         this.setState({Interface_id : event.target.value});
     }
 

@@ -24,7 +24,6 @@ class AlertMessage extends Component {
 
     messageDis = () =>{
 
-        console.log(this.props.message)
         if (this.props.message) {
           return (
             <Alert variant={this.props.message.variant} onClose={() => this.dismiss()} dismissible>
@@ -41,7 +40,6 @@ class AlertMessage extends Component {
 
     render(){ 
                 
-        console.log(this.state.message)
         return(
             this.messageDis()
         )

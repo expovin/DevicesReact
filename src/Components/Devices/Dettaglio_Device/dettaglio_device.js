@@ -3,6 +3,7 @@ import Connessioni from './Connessioni/connessioni';
 import NewConnectionModal from '../Modals/NewConnectionModal'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSignInAlt, faEdit, faTrashAlt, faPlus } from '@fortawesome/free-solid-svg-icons'
+import {Card, Row, Col} from 'react-bootstrap';
 import './dettaglio_device.css';
 import axios from 'axios';
 
@@ -19,7 +20,7 @@ class DettaglioDevice extends Component {
         force_reoad:false,
         nuoveConnessioni : [],
         connectionsType : [],
-        removeInterfaceFlg: false
+        statoIcone : 1
     }
 
     componentDidMount() {
@@ -142,24 +143,14 @@ class DettaglioDevice extends Component {
         let newDettaglioDevice = this.state.DettaglioDevice;
         newDettaglioDevice.deviceConnections = linkToDel;
         this.setState({
-            removeInterfaceFlg:true,
+            statoIcone:2,
             DettaglioDevice : newDettaglioDevice
         })
+        this.props.addMessages({variant:"info", header : "Cancellazione Interfaccie", text:"Solo le interfaccie non connesse possono essere cancellate, rimuovere la connessione prima di cancellare l'interfaccia"})
 
     }
 
     render(){
-
-        let msgAlert=null;
-
-        if(this.state.messages.length > 0){
-            msgAlert = this.state.messages.map( (message,idx) =>{
-                return <div key={idx} className={"alert "+message.level}>
-                            {message.body}
-                        </div>
-            })
-
-        }
 
         let body = <p>Please Select an item</p>;
 
@@ -169,80 +160,75 @@ class DettaglioDevice extends Component {
 
         if(this.state.DettaglioDevice){
             body= 
-            
-            <div>
 
-                <div className="card">
-                <div className="card-header">
-                    <div className="row">
-                        <div className="col-sm-9">
-                            <h3>{this.state.DettaglioDevice.Nome}</h3>
-                        </div>
-                        <div className="col-sm-3">
-                            {this.state.DettaglioDevice.urlAccesso ? <a className="float-right" target="_new" href={this.state.DettaglioDevice.urlAccesso}><FontAwesomeIcon icon={faSignInAlt} size="lg" data-toggle="tooltip" data-placement="bottom" title="Accesss alla console"/></a> : null}
-                            <i className="float-right"><FontAwesomeIcon icon={faEdit} size="lg" color="orange" data-toggle="tooltip" data-placement="bottom" title="Edita device"/></i>
-                            <i className="float-right"><FontAwesomeIcon icon={faTrashAlt} size="lg" color="red" data-toggle="tooltip" data-placement="bottom" title="Cancella device"/></i>
-                        </div>
-                    </div>
-                    
-                </div>
-                <div className="card-body">
-                    <div className="row">
-                        <div className="col-md-3">
-                            <img src={this.state.DettaglioDevice.urlFoto} className="card-img-top" alt={this.state.DettaglioDevice.urlFoto}/>
-                        </div>
-                        <div className="col-md-9">
-                            <p>{this.state.DettaglioDevice.Descrizione}</p>
-                                <div className="row">
-                                    <div className="col-md-6">
-                                        <dl className="row">
-                                            <dt className="col-sm-3">Eth.</dt>
-                                            <dd className="col-sm-9">{this.state.DettaglioDevice.IPV4_Eth}</dd>      
+                <Card>
+                    <Card.Header className="card-header">
+                        <Row>
+                            <Col className="col-sm-9">
+                                <h3>{this.state.DettaglioDevice.Nome}</h3>
+                            </Col>
+                            <Col className="col-sm-3">
+                                {this.state.DettaglioDevice.urlAccesso ? <a className="float-right" target="_new" href={this.state.DettaglioDevice.urlAccesso}><FontAwesomeIcon icon={faSignInAlt} size="lg" data-toggle="tooltip" data-placement="bottom" title="Accesss alla console"/></a> : null}
+                                <i className="float-right"><FontAwesomeIcon icon={faEdit} size="lg" color="orange" data-toggle="tooltip" data-placement="bottom" title="Edita device"/></i>
+                                <i className="float-right"><FontAwesomeIcon icon={faTrashAlt} size="lg" color="red" data-toggle="tooltip" data-placement="bottom" title="Cancella device"/></i>
+                            </Col>
+                        </Row>
+                        
+                    </Card.Header>
+                    <Card.Body className="card-body">
+                        <Row>
+                            <Col xs lg="3">
+                                <img src={this.state.DettaglioDevice.urlFoto} className="card-img-top" alt={this.state.DettaglioDevice.urlFoto}/>
+                            </Col>
+                            <Col>
+                                <p>{this.state.DettaglioDevice.Descrizione}</p>
+                                    <Row>
+                                        <Col>
+                                            <dl className="row">
+                                                <dt className="col-sm-3">Eth.</dt>
+                                                <dd className="col-sm-9">{this.state.DettaglioDevice.IPV4_Eth}</dd>      
 
-                                            <dt className="col-sm-3">Site</dt>
-                                            <dd className="col-sm-9">{this.state.DettaglioDevice.Site}</dd>                                 
-                                        </dl>                    
-                                    </div>           
+                                                <dt className="col-sm-3">Site</dt>
+                                                <dd className="col-sm-9">{this.state.DettaglioDevice.Site}</dd>                                 
+                                            </dl>                    
+                                        </Col>           
 
-                                    <div className="col-md-6">
-                                        <dl className="row">
-                                            <dt className="col-sm-3">WiFi</dt>
-                                            <dd className="col-sm-9">{this.state.DettaglioDevice.IPV4_WiFi}</dd>      
+                                        <Col>
+                                            <dl className="row">
+                                                <dt className="col-sm-3">WiFi</dt>
+                                                <dd className="col-sm-9">{this.state.DettaglioDevice.IPV4_WiFi}</dd>      
 
-                                            <dt className="col-sm-3">Modello</dt>
-                                            <dd className="col-sm-9">{this.state.DettaglioDevice.Modello}</dd>                                 
-                                        </dl>                    
-                                    </div> 
-                                </div>             
-                        </div>
-                    </div>
+                                                <dt className="col-sm-3">Modello</dt>
+                                                <dd className="col-sm-9">{this.state.DettaglioDevice.Modello}</dd>                                 
+                                            </dl>                    
+                                        </Col> 
+                                    </Row>             
+                            </Col>
+                        </Row>
 
-                    <hr/>
-                    <div className="row">
-                        <div className="col-sm-9">
-                            <h5 className="card-title">Connessioni verso altri dispositivi</h5>
-                        </div>
-                        <div className="col-sm-3">
-                            <i className="float-right" onClick={() => this.addNewConnection()}><FontAwesomeIcon icon={faPlus} size="lg" color="green" data-toggle="tooltip" data-placement="bottom" title="Aggiungi connessione"/></i>
-                            <i className="float-right" onClick={() => this.flagForDelete()}><FontAwesomeIcon icon={faTrashAlt} size="lg" color="red" data-toggle="tooltip" data-placement="bottom" title="Cancella connessione" /></i>                               
-                        </div>
-                    </div>
-                    
-                    
-                    <Connessioni conn={this.state.DettaglioDevice.deviceConnections}
-                                     deviceNavHandler = {this.props.deviceSelectedHandler}
-                                     disconnectHandler ={this.disconnectHandler}
-                                     connectHandler = {this.connectHandler}
-                                     nuoveConnessioni = {this.state.nuoveConnessioni}
-                                     addNewConnectionDone={this.addNewConnectionDone}
-                                     connectionsType ={this.state.connectionsType } 
-                                     addConnectionType = {this.addConnectionType}
-                                     removeInterfaceFlg={this.state.removeInterfaceFlg} />
-                </div>
-                </div>
-
-
-            </div>
+                        <hr/>
+                        <Row>
+                            <Col>
+                                <h5 className="card-title">Connessioni verso altri dispositivi</h5>
+                            </Col>
+                            <Col>
+                                <i className="float-right" onClick={() => this.addNewConnection()}><FontAwesomeIcon icon={faPlus} size="lg" color="green" data-toggle="tooltip" data-placement="bottom" title="Aggiungi connessione"/></i>
+                                <i className="float-right" onClick={() => this.flagForDelete()}><FontAwesomeIcon icon={faTrashAlt} size="lg" color="red" data-toggle="tooltip" data-placement="bottom" title="Cancella connessione" /></i>                               
+                            </Col>
+                        </Row>
+                        
+                        
+                        <Connessioni conn={this.state.DettaglioDevice.deviceConnections}
+                                        deviceNavHandler = {this.props.deviceSelectedHandler}
+                                        disconnectHandler ={this.disconnectHandler}
+                                        connectHandler = {this.connectHandler}
+                                        nuoveConnessioni = {this.state.nuoveConnessioni}
+                                        addNewConnectionDone={this.addNewConnectionDone}
+                                        connectionsType ={this.state.connectionsType } 
+                                        addConnectionType = {this.addConnectionType}
+                                        statoIcone={this.state.statoIcone} />
+                    </Card.Body>
+                </Card>
 
         }
 
@@ -252,7 +238,6 @@ class DettaglioDevice extends Component {
                 <NewConnectionModal show={this.state.modalNewConnectionOn} 
                                     modalHandler={this.modalHandler}
                                     availableDevices={this.state.availableConnections} />
-                {msgAlert}
                 {body}
                 
             </div>

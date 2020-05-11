@@ -1,19 +1,21 @@
 import React from 'react';
+import {Button, Card, Row, Col} from 'react-bootstrap';
 import './device.css'
 
 const device = (props) => (
-    <div className="card col-md-3 col-sm-4">
-        <div className="cardImg">
-            <img src={props.urlFoto} className="card-img-top" alt={props.urlFoto}/>
-        </div>
-        <div className="card-body">
-            <h5 className="card-title">{props.Nome}</h5>
-            <p className="card-text">{props.Site}</p>
-        </div> 
-        <div className="card-body">
-        <button type="button" className="btn btn-primary" onClick={props.clicked}>Dettagli</button>
-        </div>               
-    </div>
+    <Col sm={3}>
+        <Card>
+            <div className="imgCont">
+                <Card.Img  src={props.urlFoto} variant="top"/>
+            </div>
+            <Card.Body>
+                <Card.Title>{props.Nome}</Card.Title>
+                <Card.Text>{props.Site}</Card.Text>
+                <Button variant="primary" onClick={props.clicked}>Dettagli</Button>
+            </Card.Body>
+
+        </Card>             
+    </Col>
 );
 
 export default device;
