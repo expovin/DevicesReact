@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import Connessioni from './Connessioni/connessioni';
 import NewConnectionModal from '../Modals/NewConnectionModal'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faSignInAlt, faEdit, faTrashAlt, faPlus } from '@fortawesome/free-solid-svg-icons'
-import {Card, Row, Col} from 'react-bootstrap';
+import { faSignInAlt, faEdit, faTrashAlt, faPlus, faCheckCircle } from '@fortawesome/free-solid-svg-icons'
+import {Card, Row, Col, Button} from 'react-bootstrap';
 import './dettaglio_device.css';
 import axios from 'axios';
 
@@ -26,6 +26,7 @@ class DettaglioDevice extends Component {
     componentDidMount() {
         this.getDevices();
         this.getConnectionType();
+        this.setStatoIcone();
 
     }
 
@@ -33,6 +34,27 @@ class DettaglioDevice extends Component {
         this.componentDidMount();
     }
 
+    setStatoIcone = () =>{
+
+        let snippet = null;
+        switch (this.state.statoIcone) {
+
+            case 1:  
+                    snippet = 
+                    <Col>
+                        <i className="float-right" onClick={() => this.addNewConnection()}><FontAwesomeIcon icon={faPlus} size="lg" color="blue" data-toggle="tooltip" data-placement="bottom" title="Aggiungi connessione"/></i>
+                        <i className="float-right" onClick={() => this.flagForDelete()}><FontAwesomeIcon icon={faTrashAlt} size="lg" color="red" data-toggle="tooltip" data-placement="bottom" title="Cancella connessione" /></i>                               
+                    </Col>;
+                    break;
+            case 2: snippet = 
+                    <Col>
+                        <i className="float-right" onClick={() => { this.setState({statoIcone : 1, force_reoad: true}); this.getDevices();}}><FontAwesomeIcon icon={faCheckCircle} size="lg" color="green" data-toggle="tooltip" data-placement="bottom" title="Fatto"/></i>
+                    </Col>;
+                    break;
+
+        }
+        return snippet;
+    }
 
     getDevices = () =>{
         if(this.props.Device_Id){
@@ -61,7 +83,6 @@ class DettaglioDevice extends Component {
                 this.props.addMessages({variant:"warning", header : "Errore server", text:"Errore nel recuperare i dati dal server "+error})
             })               
         }
-         
     }    
     
     addConnectionType = (connessioni) =>{
@@ -70,7 +91,7 @@ class DettaglioDevice extends Component {
         axios.post("http://localhost:3200/hw/device/"+this.props.Device_Id+"/interfaces",{device : {interfaces : conn}})
         .then( result =>{ 
             console.log(result.data)  
-            this.state.messages.push({level:"alert-success", body: "Aggiunte nuove connessioni"})
+            this.props.addMessages({variant:"success", header : "Nuova connessione", text:"Nuove connessione aggiunta correttamente"})
             this.setState({force_reoad:true})
             this.addNewConnectionDone()
         })   
@@ -91,7 +112,7 @@ class DettaglioDevice extends Component {
         
         axios.post("http://localhost:3200/hw/fromDevice/"+this.state.DettaglioDevice.Device_Id+"/interface/"+this.state.iFace_Selected+"/toDevice/"+deviceTarget+"/interfaces/"+interfaceTarget)
         .then( result =>{ 
-            this.state.messages.push({level:"alert-success", body: "Connessione device effettuata."})
+            this.props.addMessages({variant:"success", header : "Connessione device", text:"Connessione device correttamente effettuata"})
             this.setState({modalNewConnectionOn : false, force_reoad:true})
             this.componentDidMount()
 
@@ -120,7 +141,7 @@ class DettaglioDevice extends Component {
     disconnectHandler = (connId) =>{
         axios.delete("http://localhost:3200/hw/device/connectin/"+connId)
         .then( result =>{   
-            this.state.messages.push({level:"alert-success", body: "Connessione "+connId+" elimitata correttamente "})
+            this.props.addMessages({variant:"success", header : "Disconnessione link", text:"Connessione correttamente eliminata"})
             axios.get("http://localhost:3200/hw/device/"+this.props.Device_Id)
             .then( result =>{   
                 console.log(result)
@@ -153,6 +174,18 @@ class DettaglioDevice extends Component {
         })
         this.props.addMessages({variant:"info", header : "Cancellazione Interfaccie", text:"Solo le interfaccie non connesse possono essere cancellate, rimuovere la connessione prima di cancellare l'interfaccia"})
 
+    }
+
+    deleteInterface = (iFaceId) => {
+        axios.delete("http://localhost:3200/hw/device/"+this.props.Device_Id+"/interfaces/"+iFaceId)
+        .then( result =>{   
+            this.props.addMessages({variant:"success", header : "Cancellazione Interfaccie", text:"Interfaccia cancellata correttamente"})
+            this.setState({force_reoad: true}); 
+            this.getDevices();
+        })
+        .catch( error =>{
+            this.props.addMessages({variant:"warning", header : "Errore server", text:"Non è stato possibile cancellare l'interfaccia "+error})
+        })
     }
 
     render(){
@@ -216,10 +249,7 @@ class DettaglioDevice extends Component {
                             <Col>
                                 <h5 className="card-title">Connessioni verso altri dispositivi</h5>
                             </Col>
-                            <Col>
-                                <i className="float-right" onClick={() => this.addNewConnection()}><FontAwesomeIcon icon={faPlus} size="lg" color="green" data-toggle="tooltip" data-placement="bottom" title="Aggiungi connessione"/></i>
-                                <i className="float-right" onClick={() => this.flagForDelete()}><FontAwesomeIcon icon={faTrashAlt} size="lg" color="red" data-toggle="tooltip" data-placement="bottom" title="Cancella connessione" /></i>                               
-                            </Col>
+                            {this.setStatoIcone()}
                         </Row>
                         
                         
@@ -231,6 +261,7 @@ class DettaglioDevice extends Component {
                                         addNewConnectionDone={this.addNewConnectionDone}
                                         connectionsType ={this.state.connectionsType } 
                                         addConnectionType = {this.addConnectionType}
+                                        deleteInterface = {this.deleteInterface}
                                         statoIcone={this.state.statoIcone} />
                     </Card.Body>
                 </Card>

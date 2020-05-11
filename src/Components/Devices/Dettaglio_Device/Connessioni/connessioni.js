@@ -67,7 +67,7 @@ class ConnessioniDevice extends Component {
                         snippet = <td><i className="float-right" onClick={() => this.props.connectHandler(con.Connection_type_id, con.Interface_id)}><FontAwesomeIcon icon={faPlug} size="lg" color="green" data-toggle="tooltip" data-placement="left" title="Connetti"/></i></td>
                     break;
             case 2 : snippet =  <td>
-                                    <i className="float-right" onClick={() => this.props.disconnectHandler(con.Connection_id)} ><FontAwesomeIcon icon={faMinusCircle} size="lg" color="red" data-toggle="tooltip" data-placement="left" title={"Disconnetti "+con.deviceName}/></i>
+                                    <i className="float-right" onClick={() => this.props.deleteInterface(con.Interface_id)} ><FontAwesomeIcon icon={faMinusCircle} size="lg" color="red" data-toggle="tooltip" data-placement="left" title={"Disconnetti "+con.deviceName}/></i>
                                 </td>
                                 break;
         }
