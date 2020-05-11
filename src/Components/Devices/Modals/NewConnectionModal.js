@@ -16,16 +16,16 @@ class NewConnectionModal extends Component {
 
         this.setState({device_id : event.target.value})
         const Iface = this.props.availableDevices
-        .filter( (device) => {
-            this.setState({Interface_id : device.Interface_id});
-            return device.Device_Id == event.target.value
-        })
+        .filter( (device) => device.Device_Id == event.target.value)
         .map( (device,idx) =>  <option key={idx} value={device.Interface_id}>{device.Interface_id}</option>)     
 
-        this.setState({Iface : Iface})
+        console.log(Iface[0].props.value);
+        this.setState({Interface_id : Iface[0].props.value,
+                        Iface : Iface});
     }    
 
     handlerChanceIface = (event) => {
+        console.log(event.target.value)
         this.setState({Interface_id : event.target.value});
     }
 

@@ -81,7 +81,10 @@ class DettaglioDevice extends Component {
     
 
     modalHandler = (deviceTarget, interfaceTarget) => {
-        if(deviceTarget === null){
+        console.log(deviceTarget)
+        console.log(interfaceTarget)
+        console.log("http://localhost:3200/hw/fromDevice/"+this.state.DettaglioDevice.Device_Id+"/interface/"+this.state.iFace_Selected+"/toDevice/"+deviceTarget+"/interfaces/"+interfaceTarget)
+        if(deviceTarget == null){
             this.setState({modalNewConnectionOn : false})
             return
         }
@@ -99,6 +102,8 @@ class DettaglioDevice extends Component {
     }
 
     connectHandler = (connTypeId, iFace_id) =>{
+        console.log(connTypeId)
+        console.log(iFace_id)
         axios.get("http://localhost:3200/hw/device/"+this.props.Device_Id+"/connectin_type/"+connTypeId)
         .then( result =>{ 
             console.log(result.data)  

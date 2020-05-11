@@ -77,9 +77,7 @@ class ConnessioniDevice extends Component {
 
     render(){    
 
-
-            
-            
+        console.log(this.props.conn)
 
         let table = [...this.props.conn,...this.props.nuoveConnessioni].map( (con,idx) =>{
             return     <tr key={idx}>
