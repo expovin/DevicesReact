@@ -3,8 +3,10 @@ import axios from 'axios';
 import Devices from '../../Components/Devices/devices'
 import DettaglioDevice from '../../Components/Devices/Dettaglio_Device/dettaglio_device'
 import Breadcrumb from '../../Components/Breadcrumb/Breadcrumbs';
-import './catalog.css'
 import AlertMessages from'../../Components/Messages/Alert'
+import AddDeviceModal from '../../Components/Devices/Modals/AddDeviceModal'
+
+import './catalog.css'
 
 class Catalog extends Component {
 
@@ -14,7 +16,9 @@ class Catalog extends Component {
         showDevices : true,
         showDettaglioDevice : false,
         Breadcrumbs : ["Catalogo"],
-        message : null
+        message : null,
+        modalNewDeviceOn : false,
+        tipo_device : []
     }
 
     componentDidUpdate(){
@@ -22,7 +26,6 @@ class Catalog extends Component {
     }
 
     componentDidMount() {
-        console.log("componentDidMount")
         axios.get('http://localhost:3200/hw/devices')
         .then( result =>{        
             //const devices = result.data.slice(0,16);  
@@ -30,8 +33,33 @@ class Catalog extends Component {
         })
         .catch( error =>{
             this.addMessages({variant:"warning", header : "Errore server", text:"Non è stato possibile recuperare i devices "+error})
-        })        
+        })     
+        
+        axios.get('http://localhost:3200/hw/tipo_devices')
+        .then( result =>{        
+            this.setState({tipo_device : result.data}) 
+        })
+        .catch( error =>{
+            this.addMessages({variant:"warning", header : "Errore server", text:"Non è stato possibile recuperare i tipo devices "+error})
+        })   
+
     }
+
+    getDevices = () =>{
+        if(this.state.selectedDeviceId){
+            if ( !this.state.DettaglioDevice || (this.state.selectedDeviceId !== this.props.Device_Id) || this.state.force_reoad){
+                axios.get("http://localhost:3200/hw/device/"+this.props.Device_Id)
+                .then( result =>{   
+                    //console.log(result)
+                    this.setState({DettaglioDevice : result.data, force_reoad:false})
+                })
+                .catch( error =>{                 
+                    this.props.addMessages({variant:"warning", header : "Errore server", text:"Errore nel recuperare i dati dei devices dal server "+error})
+                })
+            }
+        }
+    }
+        
     
     deviceSelectedHandler = (id, inner) => {
         console.log("deviceSelectedHandler : "+id);
@@ -44,7 +72,7 @@ class Catalog extends Component {
             showDevices : false,
             showDettaglioDevice : true,
             Breadcrumbs :[...newBreadcrumbs]
-        }, () => {console.log(this.state); this.forceUpdate()})
+        }, () => { this.forceUpdate()})
         
     }   
     
@@ -70,12 +98,48 @@ class Catalog extends Component {
         console.log("Dismiss message")
         this.setState({message : null})
     }
+
+    openAddDeviceModal = () =>{
+        this.setState({modalNewDeviceOn : true})
+    }
+
+    modalHandler = (device) => {
+        /*
+        if(device == null){
+            this.setState({modalNewDeviceOn : false})
+            return
+        }
+        */
+        if(device)
+        {
+            console.log("Acquisito device")
+            console.log(device)
+            axios.post('http://localhost:3200/hw/devices',{device : device})
+            .then( result =>{        
+                console.log(result)
+                this.addMessages({variant:"success", header : "Inserimento nuovo device", text:"Device inserito correttamente "})
+                this.componentDidMount();
+            })
+            .catch( error =>{
+                this.addMessages({variant:"warning", header : "Errore server", text:"Non è stato possibile aggiungere il device "+error})
+            })  
+        }
+
+        this.setState({modalNewDeviceOn : false})
+
+    }
+
     
     render(){
         console.log("Sono in Render!")
         return(           
             <div className="container">
                 <h1>Catalogo</h1>
+                <section>
+                    <AddDeviceModal show={this.state.modalNewDeviceOn}
+                                    modalHandler={this.modalHandler} 
+                                    tipo_device={this.state.tipo_device} />
+                </section>
                 <section>
                     <Breadcrumb Breadcrumbs={this.state.Breadcrumbs}
                                 navBreadcrumbsHandler={this.navBreadcrumbsHandler}/>
@@ -87,6 +151,7 @@ class Catalog extends Component {
                 <section>
                 { this.state.showDevices ?  
                     <Devices    devices={this.state.devices} 
+                                modalHandler = {this.openAddDeviceModal}
                                 deviceSelectedHandler={this.deviceSelectedHandler}/> : null }
                 </section>
                 <section>

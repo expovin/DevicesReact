@@ -6,7 +6,11 @@ const device = (props) => (
     <Col sm={3}>
         <Card>
             <div className="imgCont">
-                <Card.Img  src={props.urlFoto} variant="top"/>
+                <Col xs lg="1"></Col>
+                <Col xs lg="10">
+                    <Card.Img  src={props.urlFoto} variant="top"/>
+                </Col>
+                <Col xs lg="1"></Col>
             </div>
             <Card.Body>
                 <Card.Title>{props.Nome}</Card.Title>

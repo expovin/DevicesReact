@@ -102,8 +102,7 @@ class DettaglioDevice extends Component {
     
 
     modalHandler = (deviceTarget, interfaceTarget) => {
-        console.log(deviceTarget)
-        console.log(interfaceTarget)
+
         console.log("http://localhost:3200/hw/fromDevice/"+this.state.DettaglioDevice.Device_Id+"/interface/"+this.state.iFace_Selected+"/toDevice/"+deviceTarget+"/interfaces/"+interfaceTarget)
         if(deviceTarget == null){
             this.setState({modalNewConnectionOn : false})
